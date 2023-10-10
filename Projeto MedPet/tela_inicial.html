@@ -6,7 +6,6 @@
     <title>Tela Inicial</title>
     <link rel="stylesheet" href="css/estilo_geral.css">
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
-    <!-- peguei o calendario daqui: https://fullcalendar.io/docs/initialize-globals -->
     <script src="js/calendário.js" defer></script>
 
 </head>
@@ -16,16 +15,24 @@
         <div class="navbar mainscr">
             <div>
                 <a href="tela_inicial.html"><img src="logona sem nome.jpeg" alt="logo.png"></a>
-            </div>
-            <button id="toggleCalendar">Calendário</button>
-            <button>Animais</button>
-            <a href="cadastro_bicho.html"><button>Cadastrar Animal</button></a> 
+            </div>    
+            <button id="calendario">Calendário</button>
+            <button id="animais">Animais</button>
+            <button id="cadastrarAnimal">Cadastrar Animal</button>  
         </div>
     </header>
 <div class="linha">
     <div class="coluna meio">
-        <div>
-           
+        <div id="evento" class="modal">
+            <form action="" method="get" id="form">
+                <fieldset>
+                    <label for="titulo">Titulo: </label>
+                    <input type="text" name="titulo" id="titulo">
+                    <label for="data">Data: </label>
+                    <input type="date" name="data" id="data">
+                </fieldset>
+                <button type="submit" id="botao">Adicionar</button>
+            </form>
         </div>    
 
         <div id="calendar"></div>

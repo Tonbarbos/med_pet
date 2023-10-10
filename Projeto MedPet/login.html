@@ -4,30 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="css/estilo_form.css">
+    <link rel="stylesheet" href="css/yasmin.css">
 </head>
-<body class="bgcolor">
-    <div>
-        <div>
-            <h1>Login</h1>
-        </div>
+<body>
+    <div class="container">
         <div class="form">
+            <legend><img src="css\imagens\logo.png" alt="logo.png"></legend>
             <form action="" method="get">
-                <fieldset>
-                    <div class="center">
-                        <label for="email">E-mail: </label>
-                        <input type="email" name="" id="email">
-                        <label for="passwd">Senha: </label>
-                        <input type="password" name="" id="passwd">
+                <div class="form-header">
+                    <div class="title">
+                        <n>Login</n>
                     </div>
-                    <a href="cadastro.html">Não é cadastrado? Cadastre-se!</a>
-                    
-                </fieldset>
-                <input type="submit" value="Login">
+                </div>
+                <div class="input-group">
+                    <div class="input-box"> 
+                        <label for="email"></label>
+                        <input type="email" name="" id="email" placeholder="Email" required>
+                        <label for="passwd"></label>
+                        <input type="password" name="" id="passwd" placeholder="Senha" required> 
+                    </div>
+                </div>   
+                    <a class="a" href="cadastro.html">Não é cadastrado? Cadastre-se!</a>
+                <div class="login-button">        
+                    <button><a href="#">Login</a></button>
+                </div>
             </form>
         </div>
-
-        <div></div>
     </div>
     
 </body>

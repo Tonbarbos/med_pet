@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+.title{
+    font-size: 400%;
+    margin-left: 23%;
+    font-family: 'Roboto';
+    margin-top: -10%;
+}
+body{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-image: url("imagens/fundoFODA.png");
+
+}
+.a{
+    align-items: center;
+    text-decoration: none;
+    color: #178871;
+    margin-left: 14%;
+}
+
+.container{
+    width: 40%;
+    height: 80vh;
+    display: flex;
+
+}
+div > legend > img{
+    width: 12em;
+    height: 12em;
+}
+
+.form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 5rem;
+    background-color: #e7faf7;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, .212);
+    position: relative;
+    top: 11%;
+}
+
+.form-header{
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-button button{
+    border: none;
+    background-color: #1ED4AF;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10%; 
+    width: 15.5em;
+    height: 3em;
+    position: relative;
+    left: 12%;
+}
+
+.login-button button:hover{
+    background-color: #1cc2a1; 
+}
+
+.login-button button a {
+    text-decoration: none;
+    font-weight: 500px;
+    color: #fff;
+
+}
+
+.input-group{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0rem;
+    width: 20rem;
+    height: 30%;
+    margin-left: -3%;
+}
+
+.input-box input{
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #111;
+}
+
+.input-box input:hover{
+    background-color: #eeeeee75;
+}
+
+
+@media screen and (max-width: 1330px) {
+    .container{
+        width: 50%;
+    }
+
+    .form{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1064px){
+    .container{
+        width: 90%;
+        height: auto;
+    }
+}
+

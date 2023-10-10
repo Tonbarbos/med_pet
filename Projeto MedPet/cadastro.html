@@ -4,20 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-    <link rel="stylesheet" href="css/estilo_form.css">
+    <link rel="stylesheet" href="css/registro.css">
 </head>
 <body class="bgcolor">
 
-    <div class="header">
-        <h1>Cadastro</h1>
-    </div>
    
     <div class="form">
         <form action="" method="get">
-            <fieldset>
-                <legend><h3>Informações Pessoais:</h3></legend>
-                <div class="inline">
-                    <div >
+            <div class = "form-header"></div>
+            <div class="title">
+                <h1>Cadastro</h1>
+            </div>
+                <div class="input-group">
+                    <div class="input-box">
                         <label for="nome">Nome: </label>
                         <input type="text" name="" id="nome">
                         <label for="sobrenome">Sobrenome: </label>
@@ -26,9 +25,6 @@
                         <input type="text" name="" id="cpf">
                         <label for="data">Data de Nascimento: </label>
                         <input type="date" name="" id="data">
-                    </div>
-    
-                    <div class="right">
                         <label for="email">E-mail: </label>
                         <input type="email" name="" id="email">
                         <label for="passwd">Senha: </label>
@@ -37,24 +33,17 @@
                         <input type="password" name="" id="confpasswd">
                     </div>
 
-                </div>
-                
-
-            </fieldset>
-            
-            <fieldset>
-                <legend><h3>Tipo de Conta:</h3></legend>
-                <div>
+                <div class="input-radio">
                     <label for="vet">Veterinário</label>
                     <input type="radio" name="tipo" id="vet" value="veterinário">
                     <label for="tut">Tutor</label>
                     <input type="radio" name="tipo" id="tut" value="tutor">
                 </div>  
-            </fieldset>
-            <input type="submit" value="Cadastrar">
+                <div class="login-button">        
+                    <button><a href="">Cadastrar</a></button>
+            </div>
         </form>  
     </div>
-        
 
 
     

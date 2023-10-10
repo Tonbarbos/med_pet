@@ -17,7 +17,7 @@ body{
     position: relative;
     display: flex;
     flex-direction: row;
-    left: 18%;
+    top:8px;
 }
 .navbar{
     display: flex;
@@ -94,7 +94,7 @@ body{
   
 .coluna.canto {
     width: 20%;
-    box-shadow: 0px 0px 1px 0px;
+    
 
   }
 .navbar.mainscr img{
@@ -103,12 +103,40 @@ body{
     
 }  
 .coluna.meio {
-    width: 50%;
-    box-shadow: 0px 0px 1px 0px;
+    width: 80%;
   }
 
-.linha::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+div > button{
+    background-color:transparent;
+    width: 8em;
+    font-size: 0.7em;
+}
+
+.fc-button-primary{
+    width: 5em;
+}
+.modal{
+    display:none;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.none{
+    display: none;
+}
+.block{
+    display: block;
+}
+.ativo{
+    background-color: blue;
+}
+.naoAtivo{
+    background-color: transparent;
+}

@@ -1,4 +1,4 @@
-# Projeto Integrador :med_pet
+# Projeto Integrador : MedPet
 ### Integrantes do grupo: Cauã Amaral, Danton Barbosa, Wesley Alves e Yasmin Brito
 ##### Nós 4 somos estudantes do 4º Período do Curso Técnico em Informática do IFES Campus Serra e para o Projeto Integrador do curso, escolhemos fazer um site voltado para clinicas veterinárias. O Projeto MedPet é um site que tem como objetivo principal auxiliar na gestão de tratamentos de animais em clínicas veterinárias, além disso ele permite que tutores de animais possam ter mais contato com os veterinários de seus animais através do site.
 ##### Coisas que vamos tentar implementar no site:

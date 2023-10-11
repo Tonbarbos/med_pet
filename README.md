@@ -7,7 +7,7 @@
 
 * Um calendário que será administrado pelo veterinário e será exibido ao tutor contendo o dia e a hora que cada remédio terá que ser dado.(Data, hora, nome, quantidade, tipo)
 
-* Perfil do animal que conterá informações pessoais do animal (nome, código de registro, idade, peso, tipo sanguíneo, raça, porte, problemas de saúde e alergias) e informações de tutor (nome, CPF, localização residencial, telefone, email, idade e pessoa de confiança).
+* Perfil do animal que conterá informações pessoais do animal (nome, código de registro, idade, peso, tipo sanguíneo, raça, porte, problemas de saúde e alergias) e informações de tutor (nome,  localização residencial, telefone, email e idade).
 
 * Um calendário que será exibido os remédios a serem dados ao animal, nele poderá ser marcado como “dado”, “não dado” e também o tutor poderá adiar a hora, sendo que primeiro será enviado ao veterinário uma confirmação antes de que a ação seja realizada.
 
@@ -15,7 +15,7 @@
 
 * Uma tela de cadastro para a clínica veterinária.(nome e sobrenome do veterinário, nome da clínica, endereço da clínica, CPF do veterinário, RG do veterinário, idade do veterinário, estado da clínica, cidade da clínica, rua da clínica, numero da clinica, email da clínica e número de registro da CRA do veterinário).
 
-* Uma tela de cadastro para o tutor e animal.(nome do animal, idade, peso, tipo sanguíneo, código de registro, senha para uso do site, raça, porte, problemas de saúde, alergias, CPF do dono, nome do dono, idade do dono, estado do dono, cidade do dono, bairro do dono, rua do dono, número residencial do dono, telefone e email.) 
+* Uma tela de cadastro para o tutor e animal.(nome do animal, idade, peso, tipo sanguíneo, código de registro, senha para uso do site, raça, porte, problemas de saúde, alergias, nome do dono, idade do dono, estado do dono, cidade do dono, bairro do dono, rua do dono, número residencial do dono, telefone e email.) 
 
 * Uma aba de comentário no menu entre tutor e veterinário. 
 

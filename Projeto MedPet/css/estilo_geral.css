@@ -118,7 +118,7 @@ div > button{
 .modal{
     display:none;
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 3; /* Sit on top */
     padding-top: 100px; /* Location of the box */
     left: 0;
     top: 0;
@@ -127,6 +127,15 @@ div > button{
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal > form{
+    margin: auto;
+    background-color: #f9f9f9;
+    width: 68%;
+    
+}
+.modal > form > fieldset{
+    height: 5em;
 }
 .none{
     display: none;

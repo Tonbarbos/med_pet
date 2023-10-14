@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
     <link rel="stylesheet" href="css/registro.css">
+    <script src="js/auth.js" defer></script>
 </head>
 <body class="bgcolor">
 
    
     <div class="form">
         <form action="" method="get">
-            <div class = "form-header"></div>
             <div class="title">
                 <h1>Cadastro</h1>
             </div>
@@ -34,10 +34,16 @@
                     </div>
 
                 <div class="input-radio">
-                    <label for="vet">Veterinário</label>
-                    <input type="radio" name="tipo" id="vet" value="veterinário">
-                    <label for="tut">Tutor</label>
-                    <input type="radio" name="tipo" id="tut" value="tutor">
+                    <h3>Tipo de conta:</h3>
+                    <div><label for="vet">Veterinário</label>
+                        <input type="radio" name="tipo" id="vet" value="veterinário">
+                    </div>
+                    <div>
+                        <label for="tut">Tutor</label>
+                        <input type="radio" name="tipo" id="tut" value="tutor">
+                    </div>
+                    
+                    
                 </div>  
                 <div class="login-button">        
                     <button><a href="">Cadastrar</a></button>

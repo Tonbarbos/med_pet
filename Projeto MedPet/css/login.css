@@ -103,20 +103,27 @@ div > legend > img{
 }
 
 
-@media screen and (max-width: 1330px) {
+/* Responsivo para as telas populares de smartphones, não todas (ainda vou fazer uma imagem pra ficar bonito :))*/
+@media only screen and (max-width: 600px) {
+
     .container{
-        width: 50%;
+        width: 4vw;
+        padding-top: 4vh;
+        padding right: 8%;
+        margin-left: -130px;
+        margin-top: -90px;
     }
 
     .form{
         width: 100%;
-    }
-}
+        background-color: white;
+        box-shadow: none;
 
-@media screen and (max-width: 1064px){
-    .container{
-        width: 90%;
-        height: auto;
     }
-}
+    body{
+        background-image: none;
+    }
+
+} 
+
 

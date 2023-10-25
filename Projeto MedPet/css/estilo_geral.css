@@ -6,8 +6,9 @@ body{
 .bgcolor{
     background-color: lightseagreen;
 }
-.header{
+header{
     text-align: center;
+    width: 100%;
 }
 .menu{
     display: flex;
@@ -20,7 +21,7 @@ body{
     display: flex;
     flex-direction: row;
     top:8px;
-    left:5em;
+    left:1em;
 }
 .navbar{
     display: flex;
@@ -59,6 +60,8 @@ body{
 }
 .navbar.rodape{
     justify-content: center;
+    position: relative;
+    top: 7.5px;
 }
 .navbar a:hover{
     color: black;
@@ -86,7 +89,7 @@ body{
 }  
 .coluna.meio {
     width: 70%;
-    height: 80%;
+    
   }
 
 div > button{
@@ -160,3 +163,39 @@ div > button{
 .naoAtivo{
     background-color: transparent;
 }
+td{
+    height: 114px;
+}
+
+@media(max-width: 600px) {
+    
+    .fc .fc-button-primary{
+       padding: 0px;
+       margin: 2px; 
+    }
+   .fc-media-screen{
+        height: 41em;
+    }
+    .linha{
+        margin: 1px;
+        height: 45em;
+        width: 90%;
+    }
+    .fc-toolbar.fc-header-toolbar {
+      display: flex;
+      flex-direction: column;
+      
+    }
+    td{
+        height: 63.2px;
+    }
+    .fc-toolbar.fc-header-toolbar .fc-left {
+      order: 3;
+    }
+    .fc-toolbar.fc-header-toolbar .fc-center {
+      order: 1;
+    }
+    .fc-toolbar.fc-header-toolbar .fc-right {
+      order: 2;
+    }
+  }

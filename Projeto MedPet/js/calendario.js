@@ -16,8 +16,18 @@ window.onclick = function(event) {
 
 document.addEventListener('DOMContentLoaded', function() {
   var calendarEl = document.getElementById('calendar');
-  var calendar = new FullCalendar.Calendar(calendarEl, {
+  var calendar = new FullCalendar.Calendar(calendarEl, { 
     selectable : true,
+    dayMaxEvents: true,
+    dayMaxEventRows: true,
+    locale: 'pt-br',
+    views: {
+      dayGridMonth:{
+        dayMaxEvents: 3,
+        dayMaxEventRows:3
+      }
+
+    },
     headerToolbar:{
       center: 'eventButton'
     },
@@ -37,8 +47,41 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       }
     },
+    events: [
+    
+    {
+      title:'Evento1',
+      start:'2023-10-26T12:30:00',
+      end:'2023-10-26T15:30:00'
+
+    }, 
+    {
+      title:'Evento2',
+      start:'2023-10-26T09:30:00',
+      end:'2023-10-26T11:30:00'
+
+    },
+    {
+      title:'Evento3',
+      start:'2023-10-26',
+      end:'2023-10-26'
+
+    },
+    {
+      title:'Evento4',
+      start:'2023-10-26T16:00:00',
+      end:'2023-10-26T18:30:00'
+
+    },
+    {
+      title:'Evento5',
+      start:'2023-10-26',
+      end:'2023-10-26'
+
+    },
+  
+  ],
     dateClick : function(info){
-      let form = document.querySelector("#form");
       let divForm = document.getElementById("evento");
       let titulo = document.getElementById("titulo");
       let data = document.getElementById("data");

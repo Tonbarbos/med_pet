@@ -109,7 +109,7 @@ div > legend > img{
     .container{
         width: 4vw;
         padding-top: 4vh;
-        padding right: 8%;
+        padding-right: 3%;
         margin-left: -130px;
         margin-top: -90px;
     }
@@ -125,5 +125,3 @@ div > legend > img{
     }
 
 } 
-
-

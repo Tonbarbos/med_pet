@@ -168,6 +168,44 @@ td{
 }
 
 @media(max-width: 600px) {
+    .modal > form{
+        margin: auto;
+        background-color: #f9f9f9;
+        width: 75%;
+        height: 55%; 
+    }
+    .modal > form > fieldset{
+        margin: auto;
+        position: relative;
+        top: 2rem;
+        display: flex;
+        flex-direction: column;
+        height: 75%;
+        width: 65%;
+    }
+    .modal > form > fieldset > input{
+        height: 2rem;
+    
+    }
+    .modal > form > fieldset > textarea{
+        padding: 0.6em;
+        height: 8rem;
+    
+    }
+    .modal > form > button{
+        position: relative;
+        top: 2rem;
+        border: none;
+        background-color: #1ED4AF;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 3%; 
+        width: 5.5em;
+        height: 3em;
+        position: relative;
+        left: 2.3rem;
+    
+    }
     
     .fc .fc-button-primary{
        padding: 0px;
@@ -189,13 +227,17 @@ td{
     td{
         height: 63.2px;
     }
-    .fc-toolbar.fc-header-toolbar .fc-left {
-      order: 3;
-    }
-    .fc-toolbar.fc-header-toolbar .fc-center {
-      order: 1;
-    }
-    .fc-toolbar.fc-header-toolbar .fc-right {
-      order: 2;
-    }
+    .fc-toolbar.fc-header-toolbar {
+        display: flex;
+        flex-direction: column;
+      }
+      .fc-toolbar.fc-header-toolbar .fc-toolbar-chunk:nth-child(1) {
+        order: 3;
+      }
+      .fc-toolbar.fc-header-toolbar .fc-toolbar-chunk:nth-child(2) {
+        order: 1;
+      }
+      .fc-toolbar.fc-header-toolbar .fc-toolbar-chunk:nth-child(3) {
+        order: 2;
+      }
   }

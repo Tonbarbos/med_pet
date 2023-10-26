@@ -19,7 +19,8 @@
             </div>    
             <button id="calendario">Calendário</button>
             <button id="animais">Animais</button>
-            <button id="cadastrarAnimal">Cadastrar Animal</button>  
+            <button id="cadastrarAnimal">Cadastrar Animal</button>
+            <button id="logout">Logout</button>  
         </div>
     </header> 
 <div class="linha">
@@ -36,6 +37,7 @@
             <div id="evento" class="modal">
             <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST" id="form">
                 <fieldset>
+                    <legend>Cadastrar Evento</legend>
                     <label for="titulo">Titulo: </label>
                     <input type="text" name="titulo" id="titulo">
                     <label for="data">Data: </label>
@@ -52,12 +54,7 @@
 
     <div class="coluna canto">
         <div>
-            <img src="" alt="pfp.img">
-            <div class="menu">
-                <a href="#">Perfil</a>      
-                <a href="sobre.php">Sobre</a>
-                <a href="login.php">Logout</a>   
-            </div>
+            <p>Ideia: Colocar uma lista de animais aqui. Claro que o que for mostrado, tem que estar de acordo com suas respectivas relações a nivel de DB. Cada animal tem sua própria "agenda", com os horários e td mais. Ao clicar em cada animal, os eventos no calendário tem que mudar de acordo.</p>
         </div>
         
     </div>

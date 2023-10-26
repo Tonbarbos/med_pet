@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="css/yasmin.css">
+    <link rel="stylesheet" href="css/login.css">
     <script src="js/auth.js" defer></script>
 </head>
 <body>
@@ -23,13 +23,13 @@
                     // }
                 }
             ?>
-            <legend><img src="css\imagens\logo.png" alt="logo.png"></legend>
-            <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
-                <div class="form-header">
+            <legend><img src="css\imagens\logona.png" alt="logona.png"></legend>
+            <div class="form-header">
                     <div class="title">
                         <n>Login</n>
                     </div>
-                </div>
+            </div>
+            <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
                 <div class="input-group">
                     <div class="input-box"> 
                         <label for="email"></label>

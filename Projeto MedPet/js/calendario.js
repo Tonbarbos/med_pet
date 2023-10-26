@@ -1,11 +1,14 @@
 var botaoCalen = document.getElementById("calendario");
+var botaoAnim = document.getElementById("animais");
 botaoCalen.addEventListener("click", function (){
-  botaoCalen.classList.toggle("ativo");
   document.getElementById("calendar").classList.toggle("none");
 
 });
 document.getElementById("cadastrarAnimal").addEventListener("click", function(){
-  window.location.href = "cadastro_bicho.php";
+  window.location.href = "cadastro_animal.php";
+});
+document.getElementById("logout").addEventListener("click", function(){
+  window.location.href = "login.php";
 });
 var divForm = document.getElementById("evento");
 window.onclick = function(event) {
@@ -29,21 +32,43 @@ document.addEventListener('DOMContentLoaded', function() {
 
     },
     headerToolbar:{
-      center: 'eventButton'
+      center: 'eventButton1 eventButton2' 
     },
     buttonText:{
       today: 'Hoje'
     },
     customButtons:{
-      eventButton:{
+      eventButton1:{
         text: 'Mudar Formato',
         click: function(){
-          if(calendar.view.type=='dayGridMonth'){
+          if(calendar.view.type =='dayGridMonth'){
             calendar.changeView('listWeek');
-          }else{ 
+          }else if(calendar.view.type =='listWeek'){ 
+            calendar.changeView('timeGridDay');
+          }else if(calendar.view.type =='timeGridDay'){
             calendar.changeView('dayGridMonth');
           }
           
+        }
+      },
+      eventButton2:{
+        text: 'Agendar Evento',
+        click: function(){
+          let divForm = document.getElementById("evento");
+          let titulo = document.getElementById("titulo");
+          let data = document.getElementById("data");
+          let botao = document.getElementById("botao");
+          divForm.style.display="block";
+          botao.addEventListener("click", function(){
+            titulo = titulo.value;
+            data = data.value;
+            if(titulo!=null && data!=null){
+              calendar.addEvent({
+                title: titulo,
+                start: data
+              });
+            }
+          });  
         }
       }
     },
@@ -82,21 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   ],
     dateClick : function(info){
-      let divForm = document.getElementById("evento");
-      let titulo = document.getElementById("titulo");
-      let data = document.getElementById("data");
-      let botao = document.getElementById("botao");
-      divForm.style.display="block";
-      botao.addEventListener("click", function(){
-        titulo = titulo.value;
-        data = data.value;
-        if(titulo!=null && data!=null){
-          calendar.addEvent({
-            title: titulo,
-            start: data
-          });
-        }
-      });
+      
       
       
     }

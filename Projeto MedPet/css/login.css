@@ -103,7 +103,7 @@ div > legend > img{
 }
 
 
-/* Responsivo para as telas populares de smartphones, não todas (ainda vou fazer uma imagem pra ficar bonito :))*/
+/* Responsivo para as telas populares, algumas não ficaram boas mas nem Jesus agradou todo mundo*/
 @media only screen and (max-width: 600px) {
 
     .container{
@@ -116,12 +116,34 @@ div > legend > img{
 
     .form{
         width: 100%;
-        background-color: white;
+        background-color:rgba(144,  203,  44,  0.0);
         box-shadow: none;
 
     }
     body{
-        background-image: none;
+        background-image: url("imagens/fundoCelular.PNG");
+    }
+
+} 
+
+@media only screen and (min-width: 601px) and (max-width: 1280px) {
+
+    .container{
+        width: 4vw;
+        padding-top: 4vh;
+        padding-right: 3%;
+        margin-left: -130px;
+        margin-top: -90px;
+    }
+
+    .form{
+        width: 100%;
+        background-color:rgba(144,  203,  44,  0.0);
+        box-shadow: none;
+
+    }
+    body{
+        background-image: url("imagens/fundoTablete.png");
     }
 
 } 

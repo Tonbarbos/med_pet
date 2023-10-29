@@ -11,7 +11,7 @@
         <div class="header">
             <div class="logo"><img src="css/imagens/logo.png" alt="Logo"></div>
                 <div class="menu">
-                    <a href="sobre.php">Sobre</a>
+                    <a href="index.php">Sobre</a>
                     <a href="#">Fale Conosco</a>
                     <a href="login.php" class="sticky">Login</a>
                 </div>

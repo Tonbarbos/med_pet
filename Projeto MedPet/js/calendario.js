@@ -16,4 +16,10 @@ window.onclick = function(event) {
     divForm.style.display = "none";
   }
 }
+
+
+// <?phpif(isset($_POST['envia-form'])){
+//   $titulo = $_POST['titulo'];    
+//   $reg = array("options"=>array("regexp"=>"/[(a-zA-Z])(\s)]/")); 
+//   if($titulo!==null && !filter_var($titulo, FILTER_VALIDATE_REGEXP,$reg)){ echo "Entrada Inválida";}}?>
     

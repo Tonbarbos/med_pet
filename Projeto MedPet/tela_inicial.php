@@ -10,6 +10,7 @@
         document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
         var calendar = new FullCalendar.Calendar(calendarEl, { 
+          initialView: 'timeGridDay',
           selectable : true,
           dayMaxEvents: true,
           dayMaxEventRows: true,
@@ -19,7 +20,7 @@
               dayMaxEvents: 3,
               dayMaxEventRows:3
             }
-        
+
           },
           headerToolbar:{
             center: 'eventButton1 eventButton2' 
@@ -38,7 +39,6 @@
                 }else if(calendar.view.type =='timeGridDay'){
                   calendar.changeView('dayGridMonth');
                 }
-
               }
             },
             eventButton2:{
@@ -119,22 +119,16 @@
     </header> 
 <div class="linha">
     <div class="coluna meio">
-            <?php
-                if(isset($_POST['envia-form'])){
-                    $titulo = $_POST['titulo'];    
-                    $reg = array("options"=>array("regexp"=>"/^[a-zA-Z]/"));
-                    if($titulo!==null && !filter_var($titulo, FILTER_VALIDATE_REGEXP,$reg)){		  
-                        echo "Entrada Inválida";
-                    }
-                }
-            ?>
+            
             <div id="evento" class="modal">
             <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST" id="form">
                 <fieldset>
                     <legend>Cadastrar Evento</legend>
                     <label for="titulo">Titulo: </label>
                     <input type="text" name="titulo" id="titulo">
-                    <label for="data">Data: </label>
+                    <label for="data">Data de Inicio: </label>
+                    <input type="date" name="data" id="data">
+                    <label for="data">Data de Fim: </label>
                     <input type="date" name="data" id="data">
                     <label for="descr">Detalhes: </label>
                     <textarea name="descr" id="descr"></textarea>
@@ -142,7 +136,7 @@
                 <button type="submit" id="botao" name="envia-form">Adicionar</button>
             </form>
             </div>
-            
+          
         <div id="calendar"></div>
         </div>
 

@@ -22,8 +22,9 @@ body{
 
 .container{
     width: 40%;
-    height: 80vh;
     display: flex;
+    position: relative;
+    top: 6.2em;
 
 }
 div > legend > img{
@@ -34,12 +35,13 @@ div > legend > img{
 .form{
     width: 100%;
     display: flex;
+    padding-top: 1em;
+    padding-bottom: 1em;
     align-items: center;
     flex-direction: column;
     background-color: #e7faf7;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, .212);
-    position: relative;
-    top: 11%;
+    
 }
 .form > form{
     width: 80%;
@@ -129,12 +131,7 @@ div > legend > img{
 
     .form{
         width: 100%;
-        background-color: rgb(217, 255, 207);
-        box-shadow: none;
-
-    }
-    body{
-        background-image: none;
+        
     }
     .a{
         margin-left: 5px;

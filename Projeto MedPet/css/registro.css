@@ -12,25 +12,15 @@
 }
 
 body {
-<<<<<<< HEAD
     display: flex;
     justify-content: center;
     align-items: center;
    background-image: url(imagens/fundoFODA.png);
-=======
-    height: 100vh;
-    /* display: flex; 
-    justify-content: center; */
-    align-items: center; 
-    margin: 60px;
-    background-image: url(imagens/fundo3.jpg);
->>>>>>> 08f3ea5106dee76330811970ad46bf8e20a755cb
 }
 
 .container{
     width: 50%;
     display: flex;
-<<<<<<< HEAD
     position: relative;
     top: 4.2em;
 
@@ -38,24 +28,11 @@ body {
 .form{
     margin: auto;
     width: 80%;
-=======
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, .212);
-    margin: 100px;
-}
-.form{
-    margin: auto;
-    width: 50%;
-    height: 90%;
->>>>>>> 08f3ea5106dee76330811970ad46bf8e20a755cb
     display: flex;
     flex-direction: column;
     background-color: #e7faf7;
-<<<<<<< HEAD
     position: relative;
     bottom: 5%;
-=======
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, .212);
->>>>>>> 08f3ea5106dee76330811970ad46bf8e20a755cb
     
 }
 
@@ -87,7 +64,6 @@ body {
     background-color: #eeeeee75;
 }
 
-<<<<<<< HEAD
 .login-button{
     display: flex;
     align-items: center;
@@ -96,22 +72,12 @@ body {
       
 }
 
-=======
->>>>>>> 08f3ea5106dee76330811970ad46bf8e20a755cb
 .login-button button{
     border: none;
     background-color: #1ED4AF;
     border-radius: 5px;
     cursor: pointer;
-<<<<<<< HEAD
     position: relative;
-=======
-    margin-top: 3%; 
-    width: 15.5em;
-    height: 3em;
-    position: relative;
-    left: 40%;
->>>>>>> 08f3ea5106dee76330811970ad46bf8e20a755cb
 }
 
 .login-button button:hover{
@@ -154,27 +120,8 @@ body {
         display: flex;
         flex-direction: column;
         width: 100%;
-<<<<<<< HEAD
         height: 30%;
         
-    }
-    
-    .login-button button{
-=======
-        margin-bottom: 0rem;
-        height: 6%;
-        padding-left: 0%;
-        padding-right: 0%;
-        
-    }
-
-    .input-box input{
-        margin: 0.6rem 0;
-        padding: 0.6rem 1.2rem;
->>>>>>> 08f3ea5106dee76330811970ad46bf8e20a755cb
-        border: none;
-        border-radius: 10px;
-        box-shadow: 1px 1px 6px #111;
     }
 
     .login-button button{
@@ -188,7 +135,6 @@ body {
         position: relative;
     }
 
-<<<<<<< HEAD
 @media screen and (max-width: 1064px){
     .container{
         width: 100%;
@@ -198,67 +144,3 @@ body {
         width: 80%;  
     }
 }
-=======
-    .title {
-        text-align: center;
-        margin-top: 50px;
-    }
-    
-
-} 
-
-@media only screen and (min-width: 601px) and (max-width: 1280px) {
-    body{
-        background-image: none;
-        margin-top: 0%;
-        background-color: #e7faf7;
-    }
-    .form{
-        width: 100%;
-        height: 0%;
-        margin-left: 0px;
-        display: flex;
-        flex-direction: column;
-        background-color:rgba(144,  203,  44,  0.0);
-    }
-
-    .input-box{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        margin-bottom: 0rem;
-        height: 6%;
-        padding-left: 0%;
-        padding-right: 0%;
-        
-    }
-
-    .input-box input{
-        margin: 0.6rem 0;
-        padding: 0.6rem 1.2rem;
-        border: none;
-        border-radius: 10px;
-        box-shadow: 1px 1px 6px #111;
-    }
-
-    .login-button button{
-        background-color: #1ED4AF;
-        border-radius: 10px;
-        cursor: pointer;
-        margin-top: 5%; 
-        width: 15.5em;
-        height: 3em;
-        box-shadow: 1px 1px 6px #111;
-        position: relative;
-    }
-
-    .title {
-        text-align: center;
-        margin-top: 50px;
-    }
-
-} 
-
-
->>>>>>> 08f3ea5106dee76330811970ad46bf8e20a755cb
-

@@ -126,20 +126,11 @@ div > legend > img{
     }
 
     .container{
-<<<<<<< HEAD
         width: 80%;
-=======
-        width: 4vw;
-        padding-top: 4vh;
-        padding-right: 3%;
-        margin-left: -130px;
-        margin-top: -90px;
->>>>>>> 08f3ea5106dee76330811970ad46bf8e20a755cb
     }
 
     .form{
         width: 100%;
-<<<<<<< HEAD
         
     }
     .a{
@@ -153,36 +144,3 @@ div > legend > img{
         left: 12%;
     }
 }
-=======
-        background-color:rgba(144,  203,  44,  0.0);
-        box-shadow: none;
-
-    }
-    body{
-        background-image: url("imagens/fundoCelular.PNG");
-    }
-
-} 
-
-@media only screen and (min-width: 601px) and (max-width: 1280px) {
-
-    .container{
-        width: 4vw;
-        padding-top: 4vh;
-        padding-right: 3%;
-        margin-left: -130px;
-        margin-top: -90px;
-    }
-
-    .form{
-        width: 100%;
-        background-color:rgba(144,  203,  44,  0.0);
-        box-shadow: none;
-
-    }
-    body{
-        background-image: url("imagens/fundoTablete.png");
-    }
-
-} 
->>>>>>> 08f3ea5106dee76330811970ad46bf8e20a755cb

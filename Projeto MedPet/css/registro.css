@@ -10,29 +10,28 @@
     text-align: center;
 }
 body {
-    height: 100vh;
-    /* display: flex; 
+    display: flex;
     justify-content: center;
-    align-items: center; */
-   margin: auto;
+    align-items: center;
    background-image: url(imagens/fundoFODA.png);
 }
 
 .container{
-    width: 80%;
-    height: 80vh;
+    width: 50%;
     display: flex;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, .212);
+    position: relative;
+    top: 4.2em;
+
 }
 .form{
     margin: auto;
-    width: 60%;
+    width: 80%;
     display: flex;
     align-items: center;
     flex-direction: column;
     background-color: #e7faf7;
     position: relative;
-    top: 5%;
+    bottom: 5%;
     
 }
 
@@ -66,7 +65,6 @@ body {
 .login-button{
     display: flex;
     align-items: center;
-    margin-left: 20%;
     margin-top: 10%;
     position: relative;
       
@@ -78,6 +76,7 @@ body {
     padding: 0.4rem 1rem;
     border-radius: 5px;
     cursor: pointer;
+    position: relative;
 }
 
 .login-button button:hover{
@@ -107,9 +106,7 @@ body {
         height: 30%;
         
     }
-    .form{
-        width: 40%;  
-    }
+    
     .login-button button{
         border: none;
         background-color: #1ED4AF;
@@ -122,8 +119,11 @@ body {
 
 @media screen and (max-width: 1064px){
     .container{
-        width: 90%;
+        width: 100%;
         height: auto;
+    }
+    .form{
+        width: 80%;  
     }
 }
 

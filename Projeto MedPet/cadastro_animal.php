@@ -13,6 +13,20 @@
             <div class="title">
                 <h1>Cadastrar Animal</h1>
             </div>
+            <?php
+                if(isset($_POST['envia-form'])){
+                    $nome = $_POST['nome'];
+                    $especie = $_POST['especie'];
+                    $genero = $_POST['genero'];
+                    $tipo_sang = $_POST['tipo_sang'];   
+                    $reg = array("options"=>array("regexp"=>"/^[a-zA-Z] \s /"));
+                    
+                    if(!filter_var($nome, FILTER_VALIDATE_REGEXP,$reg)){		  
+                        echo "Nome invalido";
+                    }
+                    
+                }
+            ?>
             <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
                 <div class="input-group">
 

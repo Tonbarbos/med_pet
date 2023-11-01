@@ -134,7 +134,7 @@ body {
         box-shadow: 1px 1px 6px #111;
         position: relative;
     }
-
+}
 @media screen and (max-width: 1064px){
     .container{
         width: 100%;

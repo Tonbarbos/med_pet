@@ -1,3 +1,51 @@
+document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, { 
+          initialView: 'timeGridDay',
+          selectable : true,
+          dayMaxEvents: true,
+          dayMaxEventRows: true,
+          locale: 'pt-br',
+          views: {
+            dayGridMonth:{
+              dayMaxEvents: 3,
+              dayMaxEventRows:3
+            }
+
+          },
+          headerToolbar:{
+            center: 'eventButton1 eventButton2' 
+          },
+          buttonText:{
+            today: 'Hoje'
+          },
+          customButtons:{
+            eventButton1:{
+              text: 'Mudar Formato',
+              click: function(){
+                if(calendar.view.type =='dayGridMonth'){
+                  calendar.changeView('listWeek');
+                }else if(calendar.view.type =='listWeek'){ 
+                  calendar.changeView('timeGridDay');
+                }else if(calendar.view.type =='timeGridDay'){
+                  calendar.changeView('dayGridMonth');
+                }
+              }
+            },
+            eventButton2:{
+              text: 'Agendar Evento',
+              click: function(){
+                document.getElementById("evento").style.display="block";  
+              }
+            }
+          },
+
+          
+          events:'listar_eventos.php'
+
+        });
+        calendar.render();
+      });
 var botaoCalen = document.getElementById("calendario");
 var botaoAnim = document.getElementById("animais");
 botaoCalen.addEventListener("click", function (){
@@ -16,7 +64,6 @@ window.onclick = function(event) {
     divForm.style.display = "none";
   }
 }
-
 
 // <?phpif(isset($_POST['envia-form'])){
 //   $titulo = $_POST['titulo'];    

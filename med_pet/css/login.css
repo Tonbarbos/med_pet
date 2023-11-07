@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+.title{
+    font-size: 400%;
+    font-family: 'Roboto';
+    margin-top: -10%;
+}
+body{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-image: url("imagens/fundo3.jpg");
+
+}
+.a{
+    align-items: center;
+    text-decoration: none;
+    color: #178871;
+}
+
+.container{
+    width: 40%;
+    display: flex;
+    position: relative;
+    top: 6.2em;
+
+}
+div > legend > img{
+    width: 26em;
+    height: 26em;
+}
+
+.form{
+    width: 100%;
+    display: flex;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    align-items: center;
+    flex-direction: column;
+    background-color: #e7faf7;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, .212);
+    
+}
+.form > form{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-header{
+    margin-bottom: 1rem;
+}
+
+.login-button button{
+    border: none;
+    background-color: #1ED4AF;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10%; 
+    width: 15.5em;
+    height: 3em;
+}
+
+.login-button button:hover{
+    background-color: #1cc2a1; 
+}
+
+.login-button button a {
+    text-decoration: none;
+    font-weight: 500px;
+    color: #fff;
+
+}
+
+.input-group{
+    padding: 1rem 0;
+    width: 70%;
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 0rem;
+}
+
+.input-box input{
+    width: 50%;
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #111;
+}
+
+.input-box input:hover{
+    background-color: #eeeeee75;
+}
+
+
+/* Responsivo para as telas populares, algumas não ficaram boas mas nem Jesus agradou todo mundo*/
+@media only screen and (max-width: 600px) {
+    div > legend > img{
+        width: 22em;
+        height: 22em;
+    }
+    .title{
+        font-size: 400%;
+        margin-left: 0%;
+        font-family: 'Roboto';
+        margin-top: -10%;
+        box-sizing: border-box;
+    }
+    .input-box{
+        margin-bottom: 0rem;
+        width: 100%;
+        height: 30%;
+        margin-left: 0px;
+    }
+    .input-box input{
+        width: 100%;
+    }
+
+    .container{
+        width: 80%;
+    }
+
+    .form{
+        width: 100%;
+        
+    }
+    .a{
+        margin-left: 5px;
+    }
+
+} 
+@media only screen and(min-width: 600px){
+    .login-button button{
+        position: relative;
+        left: 12%;
+    }
+}

@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif; 
+
+}
+.title {
+    text-align: center;
+    margin-top: 50px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   background-image: url(imagens/fundoFODA.png);
+}
+
+.container{
+    width: 50%;
+    display: flex;
+    position: relative;
+    top: 4.2em;
+
+}
+.form{
+    margin: auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    background-color: #e7faf7;
+    position: relative;
+    bottom: 5%;
+    
+}
+
+.input-group{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 0rem;
+    height: 30%;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.input-box input{
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #111;
+}
+
+.input-box input:hover{
+    background-color: #eeeeee75;
+}
+
+.login-button{
+    display: flex;
+    align-items: center;
+    margin-top: 10%;
+    position: relative;
+      
+}
+
+.login-button button{
+    border: none;
+    background-color: #1ED4AF;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.login-button button:hover{
+    background-color: #1cc2a1; 
+}
+
+.login-button button a {
+    text-decoration: none;
+    font-weight: 500px;
+    color: #fff;
+
+}
+
+.input-radio {
+    display: flex;
+    flex-direction: column;
+    
+}
+.input-radio > div{
+    margin: 0.2em;
+}
+
+
+@media only screen and (max-width: 600px) /*Consertar o botão que ta torto, fiz de tudo e não consegui resolver */ {
+
+    body{
+        background-image: url("imagens/telaCelularGrande.png");
+        margin-top: 0%;
+    }
+    .form{
+        width: 100%;
+        height: 0%;
+        margin-left: 0px;
+        display: flex;
+        flex-direction: column;
+        background-color:rgba(144,  203,  44,  0.0);
+    }
+
+    .input-box{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 30%;
+        
+    }
+
+    .login-button button{
+        background-color: #1ED4AF;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-top: 15%; 
+        width: 15.5em;
+        height: 3em;
+        box-shadow: 1px 1px 6px #111;
+        position: relative;
+    }
+}
+@media screen and (max-width: 1064px){
+    .container{
+        width: 100%;
+        height: auto;
+    }
+    .form{
+        width: 80%;  
+    }
+}

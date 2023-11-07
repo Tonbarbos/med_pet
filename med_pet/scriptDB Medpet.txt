@@ -53,15 +53,15 @@ DROP TABLE IF EXISTS `med_pet`.`animais` ;
 
 CREATE TABLE IF NOT EXISTS `med_pet`.`animais` (
   `anim_id` INT NOT NULL AUTO_INCREMENT,
-  `anim_nome` VARCHAR(255) NOT NULL,
-  `tutores_tut_id` INT NOT NULL,
+  `anim_nome` VARCHAR(45) NOT NULL,
   `anim_especie` VARCHAR(45) NOT NULL,
   `anim_genero` VARCHAR(45) NOT NULL,
   `anim_tipSang` VARCHAR(45) NOT NULL,
   `anim_datNasc` DATE NOT NULL,
   `anim_peso` DECIMAL NOT NULL,
   `anim_alergias` VARCHAR(45) NOT NULL,
-  `anim_desc` VARCHAR(45) NULL,
+  `anim_desc` VARCHAR(255) NULL,
+  `tutores_tut_id` INT NOT NULL,
   `veterinarios_vet_id` INT NOT NULL,
   PRIMARY KEY (`anim_id`, `tutores_tut_id`, `veterinarios_vet_id`),
   CONSTRAINT `fk_category_tutores`
@@ -84,7 +84,7 @@ DROP TABLE IF EXISTS `med_pet`.`eventos` ;
 CREATE TABLE IF NOT EXISTS `med_pet`.`eventos` (
   `evt_id` INT NOT NULL AUTO_INCREMENT,
   `evt_titulo` VARCHAR(45) NOT NULL,
-  `evt_desc` VARCHAR(45) NULL,
+  `evt_desc` VARCHAR(255) NULL,
   `evt_inicio` DATETIME NOT NULL,
   `evt_fim` DATETIME NOT NULL,
   `animais_anim_id` INT NOT NULL,
@@ -96,7 +96,11 @@ CREATE TABLE IF NOT EXISTS `med_pet`.`eventos` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
 
-
+INSERT INTO `tutores` (`tut_nome`, `tut_fone`, `tut_email`, `tut_senha`) VALUES ('Juca','(33)98765-8457','jucapereira@outlook.com','123456789' );
+INSERT INTO `veterinarios` (`vet_nome`, `vet_fone`, `vet_email`, `vet_senha`) VALUES ('Jeanne','(33)98765-8457','cutieJ@gmail.com','987654321' );
+INSERT INTO `animais` (`anim_nome`, `anim_especie`, `anim_genero`, `anim_tipSang`, `anim_datNasc`, `anim_peso`, `anim_alergias`, `anim_desc`, `tutores_tut_id`, `veterinarios_vet_id`) VALUES ('Pitoco','Cão','Macho','O+', '2010-05-13', '25', 'Amendoim', 'Cachorro da raça Shitzu, pelos brancos e de estatura média.', '1', '1' );
+INSERT INTO `eventos` (`evt_titulo`, `evt_desc`, `evt_inicio`, `evt_fim`, `animais_anim_id`) VALUES ('Evento_exemplo','Remédio, consulta, exames, vacinação e etc.', '2023-11-08 13:30:00', '2023-11-08 15:30:00', '1');
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+ 

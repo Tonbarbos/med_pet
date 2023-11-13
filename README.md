@@ -17,6 +17,6 @@
 
 * Uma tela de cadastro para o tutor e animal.(nome do animal, idade, peso, tipo sanguíneo, código de registro, senha para uso do site, raça, porte, problemas de saúde, alergias, nome do dono, idade do dono, estado do dono, cidade do dono, bairro do dono, rua do dono, número residencial do dono, telefone e email.) 
 
-* Uma aba de comentário no menu entre tutor e veterináriorioriorioriroi. 
+* Uma aba de comentário no menu entre tutor e veterinário. 
 
 * Uma aba de comentário na opção “adiar” para que o tutor justifique o porquê de estar adiando aquele remédio.

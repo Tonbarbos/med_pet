@@ -53,10 +53,10 @@ botaoCalen.addEventListener("click", function (){
 
 });
 document.getElementById("cadastrarAnimal").addEventListener("click", function(){
-  window.location.href = "cadastro_animal.php";
+  window.location.replace("cadastro_animal.php");
 });
 document.getElementById("logout").addEventListener("click", function(){
-  window.location.href = "login.php";
+  window.location.replace("logoff.php");
 });
 var divForm = document.getElementById("evento");
 window.onclick = function(event) {

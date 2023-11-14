@@ -29,7 +29,7 @@
                         <n>Login</n>
                     </div>
             </div>
-            <form action="tratar_login.php" method="post">
+            <form action="logon.php" method="post">
                 <div class="input-group">
                     <div class="input-box"> 
                         <label for="email"></label>

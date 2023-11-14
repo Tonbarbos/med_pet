@@ -14,17 +14,6 @@
                 <h1>Cadastrar Animal</h1>
             </div>
             <?php
-                if(isset($_POST['envia-form'])){
-                    $nome = $_POST['nome'];
-                    $especie = $_POST['especie'];
-                    $genero = $_POST['genero'];
-                    $tipo_sang = $_POST['tipo_sang'];   
-                    $reg = array("options"=>array("regexp"=>"/^[a-zA-Z] \s /"));
-                    
-                    if(!filter_var($nome, FILTER_VALIDATE_REGEXP,$reg)){		  
-                        echo "Nome invalido";
-                    }
-                }
                 if(isset($_FILES["imagem"]) && !empty($_FILES["imagem"])){
                     move_uploaded_file($_FILES["imagem"]["tmp_name"], "./imagens".$_FILES["imagem"]["name"]);
                     echo"imagem enviada com sucesso";

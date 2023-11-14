@@ -11,23 +11,7 @@
 
    
     <div class="form">
-    <?php
-                if(isset($_POST['envia-form'])){
-                    $nome = $_POST['nome'];
-                    $email = $_POST['email'];
-                    $senha = $_POST['senha'];
-                    $confirm = $_POST['confpasswd'];   
-                    $reg = array("options"=>array("regexp"=>"/^[a-zA-Z] \s /"));
-                    
-                    if(!filter_var($nome, FILTER_VALIDATE_REGEXP,$reg)){		  
-                        echo "Nome invalido";
-                    }
-                    if(!filter_input(INPUT_POST,'email',FILTER_VALIDATE_EMAIL)){		  
-                        echo "email invalido";
-                    }
-                }
-            ?>
-        <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
+        <form action="criar_usuario.php" method="post">
             <div class="title">
                 <h1>Cadastro</h1>
             </div>
@@ -35,7 +19,7 @@
                 <fieldset>
                 <h3>Tipo de conta:</h3>
                     <div><label for="vet">Veterinário</label>
-                        <input type="radio" name="tipo" id="vet" value="veterinário">
+                        <input type="radio" name="tipo" id="vet" value="veterinario">
                     </div>
                     <div>
                         <label for="tut">Tutor</label>
@@ -57,11 +41,14 @@
                         <input type="password" name="passwd" id="passwd">
                         <label for="confpasswd">Confirmar Senha: </label>
                         <input type="password" name="confpasswd" id="confpasswd">
+                        <label for="telefone">Digite seu telefone </label>
+                        <input type="text" name="fone" id="fone">
+
                     </div>
 
                  
                 <div class="login-button">        
-                    <button type="submit"><a href="">Cadastrar</a></button>
+                    <button type="submit" name="envia-form" ><a href="">Cadastrar</a></button>
             </div>
         </form>  
     </div>

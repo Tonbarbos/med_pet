@@ -29,7 +29,7 @@
                         <n>Login</n>
                     </div>
             </div>
-            <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
+            <form action="tratar_login.php" method="post">
                 <div class="input-group">
                     <div class="input-box"> 
                         <label for="email"></label>
@@ -40,7 +40,7 @@
                 </div>   
                     <a class="a" href="cadastro.php">Não é cadastrado? Cadastre-se!</a>
                 <div class="login-button">        
-                    <button type="submit"><a href="#">Login</a></button>
+                    <button type="submit" name="envia-form">Login</button>
                 </div>
             </form>
         </div>

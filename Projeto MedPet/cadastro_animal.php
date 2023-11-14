@@ -24,9 +24,14 @@
                     if(!filter_var($nome, FILTER_VALIDATE_REGEXP,$reg)){		  
                         echo "Nome invalido";
                     }
-                    
+                }
+                if(isset($_FILES["imagem"]) && !empty($_FILES["imagem"])){
+                    move_uploaded_file($_FILES["imagem"]["tmp_name"], "./imagens".$_FILES["imagem"]["name"]);
+                    echo"imagem enviada com sucesso";
                 }
             ?>
+
+
             <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
                 <div class="input-group">
 
@@ -48,6 +53,15 @@
                     <input type="text" name="alergias" id="alergias">
                     <label for="motivo">Motivos do Tratamento: </label>
                     <textarea name="descr" id="motivo"></textarea>  
+                    
+                    <div>Para incluir as fotos TESTE</div>
+                    <form action="./cadastro_animal.php" method="post" enctype="multipart/form-data">
+                        <label>Selecione a imagem</label>
+                        <input type="file" name="imagem" accept="image/*" class="form-control"/>
+                        <button type="submit" class="btn btn-success">
+                            Enviar imagem
+                        </button>    
+                    </form>
                     </div>    
                     <div class="login-button">        
                         <button type="submit"><a href="">Cadastrar</a></button>

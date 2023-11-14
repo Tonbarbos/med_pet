@@ -3,14 +3,11 @@
 include_once "./conexao.php";
 //variavel usada para realizar a consulta
 $query_eventos = "SELECT evt_id, evt_titulo, evt_desc, evt_inicio, evt_fim, animais_anim_id from eventos";
-//variavel usada para preparar a consulta
-$preparar = $connect->prepare($query_eventos);
-//executar a consulta
-$preparar->execute();
+$retorno=executar_query($query_eventos, $connect);
 //array para guardar o resultado
 $resultado=[];
 
-while($linha = $preparar->fetch(PDO::FETCH_ASSOC)){
+while($linha = $retorno->fetch(PDO::FETCH_ASSOC)){
     extract($linha);
 
     $resultado[] = [

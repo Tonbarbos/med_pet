@@ -13,11 +13,5 @@ $i=rand();
 
 $query_add="INSERT INTO `eventos` (`evt_titulo`, `evt_desc`, `evt_inicio`, `evt_fim`, `animais_anim_id`) VALUES ('$titulo', '$desc', '$dat_ini', '$dat_fim', '1')";
 echo $query_add;
-$preparar = $connect->prepare($query_add);
-try{
-    $preparar->execute();
-}catch(PDOException $e){
-    echo "Erro ao tentar adicionar: " . $e;
-
-}
+executar_query($query_add, $connect);
 ?>

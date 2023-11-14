@@ -35,7 +35,7 @@
                         <label for="email"></label>
                         <input type="email" name="email" id="email" placeholder="Email" required>
                         <label for="passwd"></label>
-                        <input type="password" name="passwd" id="passwd" placeholder="Senha" required> 
+                        <input type="password" name="senha" id="passwd" placeholder="Senha" required> 
                     </div>
                 </div>   
                     <a class="a" href="cadastro.php">Não é cadastrado? Cadastre-se!</a>

@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -51,7 +52,7 @@
 
     <div class="coluna canto">
         <div>
-            <p>Ideia: Colocar uma lista de animais aqui. Claro que o que for mostrado, tem que estar de acordo com suas respectivas relações a nivel de DB. Cada animal tem sua própria "agenda", com os horários e td mais. Ao clicar em cada animal, os eventos no calendário tem que mudar de acordo.</p>
+            <?php echo $_SESSION['id_tut'];?>
         </div>
         
     </div>

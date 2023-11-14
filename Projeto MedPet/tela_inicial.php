@@ -51,8 +51,9 @@
         </div>
 
     <div class="coluna canto">
+    <?php echo $_SESSION['id_tut'];?>
         <div>
-            <?php echo $_SESSION['id_tut'];?>
+            
         </div>
         
     </div>

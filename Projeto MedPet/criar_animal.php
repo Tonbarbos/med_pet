@@ -26,5 +26,11 @@ $reg = array("options"=>array("regexp"=>"/^[a-zA-Z] \s /"));
 
 
 $query_add = "INSERT INTO `animais` (`anim_nome`, `anim_especie`, `anim_genero`, `anim_tipSang`, `anim_datNasc`, `anim_peso`, `anim_alergias`, `anim_desc`) VALUES ('$anim_nome', '$especie', '$genero', '$tipo_sang', '$anim_data', '$peso', '$alergias', '$descr')";
-executar_query($query_add, $connect);
+$preparar = $connect->prepare($query_add);
+try{
+    $preparar->execute();
+}catch(PDOException $e){
+    echo "Erro ao tentar adicionar: " . $e;
+
+}
 ?>

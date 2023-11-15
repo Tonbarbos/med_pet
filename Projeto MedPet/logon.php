@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once "conexao.php"; 
+include_once "conexao.php";
 $email_teste = $_POST['email'];
 $senha_teste = $_POST['senha'];
 $select="SELECT tut_id as id, tut_email as email, tut_senha as senha from tutores UNION SELECT vet_id as id, vet_email as email, vet_senha as senha from veterinarios;";
@@ -11,24 +11,17 @@ try{
     echo "Erro ao tentar buscar: " . $e;
 
 }
-$_SESSION['id_tut'];
-$_SESSION['id_vet'];
+$_SESSION['id']="";
 while($linha = $preparar->fetch(PDO::FETCH_ASSOC)){
     extract($linha);
     if($email_teste == $email && $senha_teste == $senha){
-        $_SESSION['id_tut'] = $id;
+        $_SESSION['id'] = $id;
+        $_SESSION['senha']=$senha;
         $_SESSION['email'] = $email;
+        echo $_SESSION['senha'].', '.$_SESSION['email'].', '.$_SESSION['id'];
 ?>
     <script>
-          window.location.replace("tela_inicial.php");
-    </script>
-<?php
-    }elseif($email_teste == $email && $senha_teste == $senha){
-        $_SESSION['id_vet'] = $id;
-        $_SESSION['email'] = $email;
-?>
-    <script>
-          window.location.replace("tela_inicial.php");
+        window.location.replace("tela_inicial.php");
     </script>
 <?php
     }else{

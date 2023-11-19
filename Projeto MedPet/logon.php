@@ -20,14 +20,13 @@ while($linha = $preparar->fetch(PDO::FETCH_ASSOC)){
     if($email_teste == $email && $senha_teste == $senha){
         $_SESSION['id'] = $id;
         $_SESSION['senha']=$senha;
-        $_SESSION['nome'] = $nome;
-        break;
-        
+        $_SESSION['nome'] = $nome;        
 ?>
     <script>
         window.location.replace("tela_inicial.php");
     </script>
 <?php
+    break;
     }else{
         session_destroy();
 ?>        

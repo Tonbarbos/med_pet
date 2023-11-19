@@ -51,7 +51,18 @@
         </div>
 
     <div class="coluna canto">
-    <?php echo $_SESSION['id_tut'];?>
+
+        <table>
+            <?php
+            include_once "listar_animais.php";
+            while($linha = $preparar->fetch(PDO::FETCH_ASSOC)){
+                extract($linha);
+            ?>
+        <tr><td>ableble</td><td><?php echo $nome; ?></td></tr>
+               <?php}?> 
+        </table>
+    
+    <?php echo $_SESSION['id']; echo $_SESSION['nome'];?>
         <div>
             
         </div>

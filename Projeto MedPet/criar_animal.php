@@ -10,6 +10,8 @@ $anim_data = $_POST['anim_data'];
 $alergias= $_POST['alergias'];
 $descr = $_POST['descr'];
 $reg = array("options"=>array("regexp"=>"/^[a-zA-Z] \s /"));
+$tutorSelecionado = $_POST['selecaoTutores'];
+$veterinarioSelecionado = $_POST['selecaoVeterinarios'];
 //if(isset($_POST['envia-form'])){
 
     //if(!filter_var($, FILTER_VALIDATE_REGEXP,$reg)){		  
@@ -19,7 +21,7 @@ $reg = array("options"=>array("regexp"=>"/^[a-zA-Z] \s /"));
 
 
 
-$query_add = "INSERT INTO `animais` (`anim_nome`, `anim_especie`, `anim_genero`, `anim_tipSang`, `anim_datNasc`, `anim_peso`, `anim_alergias`, `anim_desc`) VALUES ('$anim_nome', '$especie', '$genero', '$tipo_sang', '$anim_data', '$peso', '$alergias', '$descr')";
+$query_add = "INSERT INTO `animais` (`anim_nome`, `anim_especie`, `anim_genero`, `anim_tipSang`, `anim_datNasc`, `anim_peso`, `anim_alergias`, `anim_desc`, `tutores_tut_id`, `veterinarios_vet_id` ) VALUES ('$anim_nome', '$especie', '$genero', '$tipo_sang', '$anim_data', '$peso', '$alergias', '$descr', '$tutorSelecionado', '$veterinarioSelecionado')";
 $preparar = $connect->prepare($query_add);
 try{
     $preparar->execute();

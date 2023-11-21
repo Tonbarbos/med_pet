@@ -51,12 +51,12 @@
         </div>
 
     <div class="coluna canto">   
-    <?php echo $_SESSION['nome_tut'];//if(is_null($_SESSION['nome_vet'])){echo "Bem Vindo, ".$_SESSION['nome_tut'];}else if(is_null($_SESSION['nome_tut'])){echo "Bem Vindo, ".$_SESSION['nome_vet'];}?>
+    <?php if($_SESSION['nome_vet']){echo "Bem Vindo, ".$_SESSION['nome_vet'];}else if($_SESSION['nome_tut']){echo "Bem Vindo, ".$_SESSION['nome_vet'];}?>
 
         <table border="1" width="100%">
             <?php
             include_once "listar_animais.php";
-            while($linha = $preparar->fetch(PDO::FETCH_ASSOC)){
+            while($linha = $preparar->fetchall(PDO::FETCH_ASSOC)){
                 extract($linha);
             ?>
         <tr><td>Animal:</td>

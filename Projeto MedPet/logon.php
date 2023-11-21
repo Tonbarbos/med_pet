@@ -24,11 +24,13 @@ foreach($array1 as $chave => $valor){
     if($email_teste == $email && $senha_teste == $senha){
         $_SESSION['id_tut'] = $id;
         $_SESSION['senha_tut']=$senha;
-        $_SESSION['nome_tut'] = $nome;        
+        $_SESSION['nome_tut'] = $nome;
+        echo "tut";
+        echo $_SESSION['senha_tut'].', '.$_SESSION['nome_tut'].', '.$_SESSION['id_tut'];        
 ?>
-    <script>
+    <!-- <script>
         window.location.replace("tela_inicial.php");
-    </script>
+    </script> -->
 <?php
     break;
     }else{
@@ -41,11 +43,13 @@ foreach($array2 as $chave => $valor){
     if($email_teste == $email && $senha_teste == $senha){
         $_SESSION['id_vet'] = $id;
         $_SESSION['senha_vet']=$senha;
-        $_SESSION['nome_vet'] = $nome;        
+        $_SESSION['nome_vet'] = $nome;
+        echo "vet";
+        echo $_SESSION['senha_vet'].', '.$_SESSION['nome_vet'].', '.$_SESSION['id_vet'];        
 ?>
-    <script>
+    <!-- <script>
         window.location.replace("tela_inicial.php");
-    </script>
+    </script> -->
 <?php
     break;
     }else{
@@ -55,13 +59,13 @@ foreach($array2 as $chave => $valor){
 if($counter=(count($array1)+count($array2))){
     session_destroy();
 ?>        
-        <script>
+        <!-- <script>
           window.location.replace("login.php");
           alert("Credenciais inválidas!");
-        </script>
+        </script> -->
 <?php
 
 }
 
-echo $_SESSION['senha'].', '.$_SESSION['nome'].', '.$_SESSION['id'];
+
 ?>

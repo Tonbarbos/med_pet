@@ -2,16 +2,18 @@
 //incluir o conteudo do arquivo conexao.php
 include_once "./conexao.php";
 //variavel usada para realizar a consulta
-$query_eventos = "SELECT evt_id, evt_titulo, evt_desc, evt_inicio, evt_fim, animais_anim_id from eventos";
+$query_eventos = "SELECT anim.tutores_tut_id as id_tut, anim.veterinarios_vet_id as id_vet, anim.anim_id, evt.evt_titulo, evt.evt_desc, evt.evt_inicio, evt.evt_fim, evt.animais_anim_id from eventos evt join animais anim on (anim.anim_id=evt.animais_anim_id)" ; //where anim.veterinarios_vet_id=".$_SESSION['id']
+$query_eventos2 = "SELECT anim.tutores_tut_id as id_tut, anim.veterinarios_vet_id as id_vet, anim.anim_id, evt.evt_titulo, evt.evt_desc, evt.evt_inicio, evt.evt_fim, evt.animais_anim_id from eventos evt join animais anim on (anim.anim_id=evt.animais_anim_id) where anim.tutores_tut_id=".$_SESSION['id'];
 //variavel usada para preparar a consulta
 $preparar = $connect->prepare($query_eventos);
 //executar a consulta
 $preparar->execute();
+$array = $preparar->fetchall(PDO::FETCH_ASSOC);
 //array para guardar o resultado
 $resultado=[];
 
-while($linha = $preparar->fetch(PDO::FETCH_ASSOC)){
-    extract($linha);
+foreach($array as $chave => $valor){
+    extract($valor);
 
     $resultado[] = [
         //descricao do formato abaixo: diretriz do fullcalendar => nome da coluna no DB

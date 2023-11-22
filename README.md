@@ -11,7 +11,7 @@
 
 * Um calendário que será exibido os remédios a serem dados ao animal, nele poderá ser marcado como “dado”, “não dado” e também o tutor poderá adiar a hora, sendo que primeiro será enviado ao veterinário uma confirmação antes de que a ação seja realizada.
 
-* Uma lista que conterá cada animal que está sendo avaliado pelo veterinário, clicando em uma das opções o veterinário será enviado ao Perfil do Animal.(nome, código de registro e foto). 
+* Uma lista que conterá cada animal que está sendo avaliado pelo veterinário(feito), clicando em uma das opções o veterinário será enviado ao Perfil do Animal.(nome, código de registro e foto). 
 
 * Uma tela de cadastro para a clínica veterinária.(nome e sobrenome do veterinário, nome da clínica, endereço da clínica, CPF do veterinário, RG do veterinário, idade do veterinário, estado da clínica, cidade da clínica, rua da clínica, numero da clinica, email da clínica e número de registro da CRA do veterinário).
 

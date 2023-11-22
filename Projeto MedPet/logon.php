@@ -31,7 +31,7 @@ foreach($array1 as $chave => $valor){
         echo "tut";     
 ?>
     <script>
-        window.location.replace("tela_inicial.php");
+        window.location.href="tela_inicial.php";
     </script>
 <?php
     break;
@@ -52,7 +52,7 @@ foreach($array2 as $chave => $valor){
         echo "vet ";        
 ?>
     <script>
-        window.location.replace("tela_inicial.php");
+        window.location.href="tela_inicial.php";
     </script>
 <?php
     break;

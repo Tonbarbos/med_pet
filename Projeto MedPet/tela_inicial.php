@@ -51,13 +51,13 @@
         </div>
 
     <div class="coluna canto">   
-    <?php if($_SESSION['nome_vet']){echo "Bem Vindo, ".$_SESSION['nome_vet'];}else if($_SESSION['nome_tut']){echo "Bem Vindo, ".$_SESSION['nome_vet'];}?>
+    <?php if($_SESSION['vet']){echo "Bem Vindo(a), ".$_SESSION['nome_vet'];}else if($_SESSION['tut']){echo "Bem Vindo(a), ".$_SESSION['nome_tut'];}?>
 
         <table border="1" width="100%">
             <?php
             include_once "listar_animais.php";
-            while($linha = $preparar->fetchall(PDO::FETCH_ASSOC)){
-                extract($linha);
+            foreach($array as $chave => $valor){
+                extract($valor);
             ?>
         <tr><td>Animal:</td>
         <td><?php echo $nome;}?></td></tr> 

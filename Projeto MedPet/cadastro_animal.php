@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,21 +12,13 @@
             <div class="title">
                 <h1>Cadastrar Animal</h1>
             </div>
-            <?php
-                if(isset($_FILES["imagem"]) && !empty($_FILES["imagem"])){
-                    move_uploaded_file($_FILES["imagem"]["tmp_name"], "./imagens".$_FILES["imagem"]["name"]);
-                    echo"imagem enviada com sucesso";
-                }
-            ?>
-
-
-            <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
+              <form action="criar_animal.php" method="post" enctype="multipart/form-data">
                 <div class="input-group">
 
                     
                     <div class= "input-box">
-                    <label for="nome">Nome: </label>
-                    <input type="text" name="nome" id="nome">
+                    <label for="anim_nome">Nome: </label>
+                    <input type="text" name="anim_nome" id="anim_nome">
                     <label for="especie">Espécie: </label>
                     <input type="text" name="especie" id="especie">
                     <label for="genero">Gênero: </label>
@@ -36,12 +27,12 @@
                     <input type="text" name="tipo_sang" id="tipo">
                     <label for="peso">Peso: </label>
                     <input type="text" name="peso" id="peso">
-                    <label for="data">Data de Nascimento: </label>
-                    <input type="date" name="data" id="data">
+                    <label for="anim_data">Data de Nascimento: </label>
+                    <input type="date" name="anim_data" id="anim_data">
                     <label for="alergias">Alergias: </label>
                     <input type="text" name="alergias" id="alergias">
-                    <label for="motivo">Motivos do Tratamento: </label>
-                    <textarea name="descr" id="motivo"></textarea>  
+                    <label for="descr">Motivos do Tratamento: </label>
+                    <textarea name="descr" id="descr"></textarea>                 
                     <div class="box">
                         <label for ="selecaotutores">Selecione o tutor</label>
                         <select name="selecaoTutores">
@@ -88,22 +79,18 @@
                                 }
                             ?>
                         </select>
-                    </div>    
-                    
-                    <div>Para incluir as fotos TESTE</div>
-                    <form action="./cadastro_animal.php" method="post" enctype="multipart/form-data">
-                        <label>Selecione a imagem</label>
-                        <input type="file" name="imagem" accept="image/*" class="form-control"/>
-                        <button type="submit" class="btn btn-success">
-                            Enviar imagem
-                        </button>    
-                    </form>
-                    </div>    
+                    </div>
+
+                    <label for="imagem">Selecione a imagem</label>
+                    <input type="file" name="imagem" accept="image/*" class="form-control" required/>
                     <div class="login-button">        
-                        <button type="submit"><a href="">Cadastrar</a></button>
+                        <button type="submit" value="Salvar" name="btn">Cadastrar</button>
+
+                    </div>
                 </div>
             </div>
-            </form>
-        </div>
+        </form>
     </div>
-    
+</body>
+</html>
+</body>

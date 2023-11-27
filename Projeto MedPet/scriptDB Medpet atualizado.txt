@@ -1,0 +1,83 @@
+===Base de Dados med_pet
+
+== Estrutura da tabela animais
+
+|------
+|Coluna|Tipo|Nulo|Predefinido
+|------
+|//**anim_id**//|int(11)|Não|
+|anim_nome|varchar(45)|Não|
+|anim_especie|varchar(45)|Não|
+|anim_genero|varchar(45)|Não|
+|anim_tipSang|varchar(45)|Não|
+|anim_datNasc|date|Não|
+|anim_peso|decimal(10,0)|Não|
+|anim_alergias|varchar(45)|Não|
+|anim_desc|varchar(255)|Não|
+|//**tutores_tut_id**//|int(11)|Não|
+|//**veterinarios_vet_id**//|int(11)|Não|
+== Extraindo dados da tabela animais
+
+|1|Pitoco|Cão|Macho|O+|2010-05-13|25|Amendoim|Cachorro da raça Shitzu, pelos brancos e de estatura média.|1|1
+|5|aa|a|a|a|2023-11-01|5|a|a
+
+
+|2|2
+|8|rivaldos|aa|aaa|aaa|2023-11-04|22|aaaa|zzz
+|3|3
+== Estrutura da tabela arquivo
+
+|------
+|Coluna|Tipo|Nulo|Predefinido
+|------
+|//**id**//|int(11)|Não|
+|arquivo|varchar(40)|Não|
+|data|date|Não|
+== Extraindo dados da tabela arquivo
+
+|1|9228e6bcb43543b8694225fdc804a113..png|2023-11-26
+== Estrutura da tabela eventos
+
+|------
+|Coluna|Tipo|Nulo|Predefinido
+|------
+|//**evt_id**//|int(11)|Não|
+|evt_titulo|varchar(45)|Não|
+|evt_desc|varchar(255)|Sim|NULL
+|evt_inicio|datetime|Não|
+|evt_fim|datetime|Não|
+|//**animais_anim_id**//|int(11)|Não|
+== Extraindo dados da tabela eventos
+
+|1|Evento_exemplo|Remédio, consulta, exames, vacinação e etc.|2023-11-08 13:30:00|2023-11-08 15:30:00|1
+== Estrutura da tabela tutores
+
+|------
+|Coluna|Tipo|Nulo|Predefinido
+|------
+|//**tut_id**//|int(11)|Não|
+|tut_nome|varchar(16)|Não|
+|tut_fone|varchar(45)|Não|
+|tut_email|varchar(255)|Não|
+|tut_senha|varchar(32)|Não|
+== Extraindo dados da tabela tutores
+
+|1|Juca|(33)98765-8457|jucapereira@outlook.com|123456789
+|2|aaaaaa|aaaaaa|aaaaa|aaaa
+|3|rrrrrrrrrrrrrrr|123|aaaaaaaaaaa@gmail.com|123
+|4|bbbbbbbbbb|123|aaaaaaaaaaa@gmail.com|123
+== Estrutura da tabela veterinarios
+
+|------
+|Coluna|Tipo|Nulo|Predefinido
+|------
+|//**vet_id**//|int(11)|Não|
+|vet_nome|varchar(16)|Não|
+|vet_fone|varchar(45)|Não|
+|vet_email|varchar(255)|Não|
+|vet_senha|varchar(32)|Não|
+== Extraindo dados da tabela veterinarios
+
+|1|Jeanne|(33)98765-8457|cutieJ@gmail.com|987654321
+|2|bbbbba|123|aaaaaaaaaaa@gmail.com|123
+|3|ronaldo|123|aaaaaaaaaaa@gmail.com|123

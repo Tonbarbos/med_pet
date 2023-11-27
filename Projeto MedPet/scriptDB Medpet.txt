@@ -89,19 +89,19 @@ CREATE TABLE IF NOT EXISTS `med_pet`.`eventos` (
   `evt_fim` DATETIME NOT NULL,
   `animais_anim_id` INT NOT NULL,
   
-  PRIMARY KEY (`evt_id`, `animais_anim_id`),
+  PRIMARY KEY (`evt_id`, `animais_anim_id`, `animais_tutores_tut_id`, `animais_veterinarios_vet_id`),
   CONSTRAINT `fk_timestamps_animais1`
-    FOREIGN KEY (`animais_anim_id`)
-    REFERENCES `med_pet`.`animais` (`anim_id`)
+    FOREIGN KEY (`animais_anim_id` , `animais_tutores_tut_id` , `animais_veterinarios_vet_id`)
+    REFERENCES `med_pet`.`animais` (`anim_id` , `tutores_tut_id` , `veterinarios_vet_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
 
 INSERT INTO `tutores` (`tut_nome`, `tut_fone`, `tut_email`, `tut_senha`) VALUES ('Juca','(33)98765-8457','jucapereira@outlook.com','123456789' );
 INSERT INTO `tutores` (`tut_nome`, `tut_fone`, `tut_email`, `tut_senha`) VALUES ('Arthur','(33)98631-7820','arthur56@gmail.com','123456789' );
 INSERT INTO `veterinarios` (`vet_nome`, `vet_fone`, `vet_email`, `vet_senha`) VALUES ('Jeanne','(33)98765-8457','cutieJ@gmail.com','987654321' );
-INSERT INTO `animais` (`anim_nome`, `anim_especie`, `anim_genero`, `anim_tipSang`, `anim_datNasc`, `anim_peso`, `anim_alergias`, `anim_desc`, `tutores_tut_id`, `veterinarios_vet_id`) VALUES ('Pitoco','Cão','Macho','O+', '2010-05-13', '25', 'Amendoim', 'Cachorro da raça Shitzu, pelos brancos e de estatura média.', '1', '1' );
-INSERT INTO `animais` (`anim_nome`, `anim_especie`, `anim_genero`, `anim_tipSang`, `anim_datNasc`, `anim_peso`, `anim_alergias`, `anim_desc`, `tutores_tut_id`, `veterinarios_vet_id`) VALUES ('Maxwell','Ave','Macho','A+', '2016-01-30', '2', 'Nenhuma', 'Papagaio cinza com uma listra vermelha na cauda', '2', '1' );
-INSERT INTO `eventos` (`evt_titulo`, `evt_desc`, `evt_inicio`, `evt_fim`, `animais_anim_id`) VALUES ('Evento_exemplo','Remédio, consulta, exames, vacinação e etc.', '2023-11-08 13:30:00', '2023-11-08 15:30:00', '1');
+INSERT INTO `animais` (`anim_nome`, `anim_especie`, `anim_genero`, `anim_tipSang`, `anim_datNasc`, `anim_peso`, `anim_alergias`, `anim_desc`, `tutores_tut_id`, `veterinarios_vet_id`) VALUES ('Pitoco','Cão','Macho','O+', '2010-05-13', '25', 'Amendoim', 'Detalhes extra', '1', '1' );
+INSERT INTO `animais` (`anim_nome`, `anim_especie`, `anim_genero`, `anim_tipSang`, `anim_datNasc`, `anim_peso`, `anim_alergias`, `anim_desc`, `tutores_tut_id`, `veterinarios_vet_id`) VALUES ('Maxwell','Ave','Macho','A+', '2016-01-30', '2', 'Nenhuma', 'Detalhes extra', '2', '1' );
+INSERT INTO `eventos` (`evt_titulo`, `evt_desc`, `evt_inicio`, `evt_fim`, `animais_anim_id`) VALUES ('Evento_exemplo','Remédio, consulta, exames, vacinação e etc.', '2023-11-08 13:30:00', '2023-11-08 15:30:00', '1','1','1');
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;

@@ -13,7 +13,6 @@ if ($tipo == 'veterinario'){
 }elseif ($tipo == 'tutor'){
     $query_add="INSERT INTO `tutores` (`tut_nome`, `tut_fone`, `tut_email`, `tut_senha`) VALUES ('$nome', '$fone', '$email', '$senha')";   
 }
-executar_query($query_add, $connect);
 $preparar = $connect->prepare($query_add);
 try{
     $preparar->execute();

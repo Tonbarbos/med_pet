@@ -5,13 +5,12 @@ $titulo = $_POST['titulo'];
 $dat_ini = $_POST['dat_ini'];
 $dat_fim = $_POST['dat_fim'];
 $desc = $_POST['desc'];
-$i=rand();
-//o 1 que corresponde ao id tem q ser uma variavel 
-//q tenha o valor correspondente ao numero de linhas para q possamos somar +1, 
-//e o ultimo id corresponde ao relacionamento a um dado na tabela de animais
-//deve mudar a depender do animal selecionado pelo usuario(que tambem deve ter um id, por sinal)
+$tutor = $_POST['tutor'];
+$vet = $_POST['vet'];
 
-$query_add="INSERT INTO `eventos` (`evt_titulo`, `evt_desc`, `evt_inicio`, `evt_fim`, `animais_anim_id`) VALUES ('$titulo', '$desc', '$dat_ini', '$dat_fim', '1')";
+//ainda tenho q trabalhar com a brincadeira de diferenciar o tipo de usuário logado aq nesse select
+$query_add="INSERT INTO `eventos` (`evt_titulo`, `evt_desc`, `evt_inicio`, `evt_fim`, `anim_id`, `tut_id`,`vet_id`) 
+VALUES ('$titulo', '$desc', '$dat_ini', '$dat_fim', '1', '1', '1')";
 echo $query_add;
 $preparar = $connect->prepare($query_add);
 try{

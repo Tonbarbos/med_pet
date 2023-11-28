@@ -34,7 +34,6 @@
                     <input type="text" name="alergias" id="alergias">
                     <label for="descr">Motivos do Tratamento: </label>
                     <textarea name="descr" id="descr"></textarea>                 
-                      
                     <div class="box">
                         <label for = "selecaoVeterinarios">Selecione o veterinário</label>
                         <select name="selecaoVeterinarios">
@@ -52,11 +51,12 @@
                                 } catch (PDOException $e) {
                                     die("Erro na conexão: " . $e->getMessage());
                                 }
+                                
                             ?>
                         </select>
                     </div>
 
-                    <label for="imagem">Selecione a imagem</label>
+                    <label for="imagem">Selecione a imagem de perfil do animal:</label>
                     <input type="file" name="imagem" accept="image/*" class="form-control" required/>
                     <div class="login-button">        
                         <button type="submit" value="Salvar" name="btn">Cadastrar</button>

@@ -97,12 +97,12 @@ CREATE TABLE IF NOT EXISTS `med_pet`.`eventos` (
     REFERENCES `med_pet`.`animais` (`anim_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-    CONSTRAINT `fk_timestamps_tutores1`
+  CONSTRAINT `fk_timestamps_tutores1`
     FOREIGN KEY (`tut_id`)
     REFERENCES `med_pet`.`animais` (`tutores_tut_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-    CONSTRAINT `fk_timestamps_veterinarios1`
+  CONSTRAINT `fk_timestamps_veterinarios1`
     FOREIGN KEY (`vet_id`)
     REFERENCES `med_pet`.`animais` (`veterinarios_vet_id`)
     ON DELETE NO ACTION

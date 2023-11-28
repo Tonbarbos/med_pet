@@ -1,12 +1,14 @@
 <?php
+session_start();
 //incluir o conteudo do arquivo conexao.php
 include_once "./conexao.php";
 //variaveis usada para realizar a consulta, o valor alterna de acordo com o tipo de usuario logado
-if($_SESSION['tut']){
-    $query_eventos = "SELECT tut_id, vet_id, evt_titulo, evt_desc, evt_inicio, evt_fim, anim_id from eventos 
+$query_eventos;
+if($_SESSION['vet']){
+    $query_eventos = "SELECT evt_titulo, evt_desc, evt_inicio, evt_fim, anim_id, tut_id, vet_id from eventos 
     where vet_id=".$_SESSION['id_vet']; 
-}else if($_SESSION['vet']){
-    $query_eventos = "SELECT tut_id, vet_id, evt_titulo, evt_desc, evt_inicio, evt_fim, anim_id from eventos 
+}else if($_SESSION['tut']){
+    $query_eventos = "SELECT evt_titulo, evt_desc, evt_inicio, evt_fim, anim_id, tut_id, vet_id from eventos 
     where tut_id=".$_SESSION['id_tut'];
 }
 //variavel usada para preparar a consulta
@@ -20,6 +22,7 @@ $evt_calendar=[];
 
 foreach($array as $chave => $valor){
     extract($valor);
+    var_dump($valor);
     $evt_calendar[] = [
         //descricao do formato abaixo: diretriz do fullcalendar => nome da coluna no DB
         'title' => $evt_titulo,

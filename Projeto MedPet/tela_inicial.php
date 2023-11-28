@@ -22,32 +22,35 @@
                 <a href="tela_inicial.php"><img src="css/imagens/logona sem nome.jpeg" alt="logo.png"></a>
             </div>    
             <button id="calendario">Calendário</button>
-            <button id="animais">Animais</button>
-            <button id="cadastrarAnimal">Cadastrar Animal</button>
+            <?php if ($_SESSION['vet']){?>
+                <button id="cadastrarAnimal">Cadastrar Animal</button>
+            <?php }?>
             <button id="logout">Logout</button>  
         </div>
     </header> 
 <div class="linha">
     <div class="coluna meio">
             
-            <div id="evento" class="modal">
-            <form action="criar_evento.php" method="POST" id="form">
-                <fieldset>
-                    <legend>Cadastrar Evento</legend>
-                    <label for="titulo">Titulo: </label>
-                    <input type="text" name="titulo" id="titulo">
-                    <label for="data">Data de Inicio: </label>
-                    <input type="date" name="dat_ini" id="data">
-                    <label for="data">Data de Fim: </label>
-                    <input type="date" name="dat_fim" id="data">
-                    <label for="desc">Detalhes: </label>
-                    <textarea name="desc" id="desc"></textarea>
-                </fieldset>
-                <button type="submit" id="botao" name="envia-form">Adicionar</button>
-            </form>
-            </div>
+        <div id="evento" class="modal">
+        <form action="criar_evento.php" method="POST" id="form">
+            <fieldset>
+                <legend>Cadastrar Evento</legend>
+                <label for="titulo">Titulo: </label>
+                <input type="text" name="titulo" id="titulo">
+                <label for="data">Data de Inicio: </label>
+                <input type="date" name="dat_ini" id="data">
+                <label for="data">Data de Fim: </label>
+                <input type="date" name="dat_fim" id="data">
+                <label for="desc">Detalhes: </label>
+                <textarea name="desc" id="desc"></textarea>
+            </fieldset>
+            <button type="submit" id="botao" name="envia-form">Adicionar</button>
+        </form>
+        </div>
           
         <div id="calendar"></div>
+        </div>
+        <div id="perfil"></div>
         </div>
 
     <div class="coluna canto">   

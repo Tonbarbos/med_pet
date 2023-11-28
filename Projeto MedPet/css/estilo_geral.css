@@ -6,6 +6,9 @@ body{
 .bgcolor{
     background-color: lightseagreen;
 }
+.perfil{
+    display: none;
+}
 header{
     text-align: center;
     position: relative;

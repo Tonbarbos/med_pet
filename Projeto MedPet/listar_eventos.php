@@ -3,9 +3,9 @@
 include_once "./conexao.php";
 //variaveis usada para realizar a consulta, o valor alterna de acordo com o tipo de usuario logado
 if($_SESSION['tut']){
-    $query_eventos = "SELECT anim.tutores_tut_id as id_tut, anim.veterinarios_vet_id as id_vet, anim.anim_id, evt.evt_titulo, evt.evt_desc, evt.evt_inicio, evt.evt_fim, evt.animais_anim_id from eventos evt join animais anim on (evt.animais_anim_id=anim.anim_id) where anim.veterinarios_vet_id=".$_SESSION['id_vet']; //
+    $query_eventos = "SELECT tut_id, vet_id, evt_titulo, evt_desc, evt_inicio, evt_fim, anim_id from eventos where vet_id=".$_SESSION['id_vet']; //
 }else if($_SESSION['vet']){
-    $query_eventos = "SELECT anim.tutores_tut_id as id_tut, anim.veterinarios_vet_id as id_vet, anim.anim_id, evt.evt_titulo, evt.evt_desc, evt.evt_inicio, evt.evt_fim, evt.animais_anim_id from eventos evt join animais anim on (evt.animais_anim_id=anim.anim_id) where anim.tutores_tut_id=".$_SESSION['id_tut'];
+    $query_eventos = "SELECT tut_id, vet_id, evt_titulo, evt_desc, evt_inicio, evt_fim, anim_id from eventos where tut_id=".$_SESSION['id_tut'];
 }
 //variavel usada para preparar a consulta
 $preparar = $connect->prepare($query_eventos);
@@ -26,4 +26,4 @@ foreach($array as $chave => $valor){
     ];
 
 }
-echo json_encode($resultado);                
+echo json_encode($evt_calendar);                

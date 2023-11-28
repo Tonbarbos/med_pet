@@ -93,8 +93,18 @@ CREATE TABLE IF NOT EXISTS `med_pet`.`eventos` (
   
   PRIMARY KEY (`evt_id`, `anim_id`, `tut_id`, `vet_id`),
   CONSTRAINT `fk_timestamps_animais1`
-    FOREIGN KEY (`anim_id` , `tut_id` , `vet_id`)
-    REFERENCES `med_pet`.`animais` (`anim_id` , `tutores_tut_id` , `veterinarios_vet_id`)
+    FOREIGN KEY (`anim_id`)
+    REFERENCES `med_pet`.`animais` (`anim_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+    CONSTRAINT `fk_timestamps_tutores1`
+    FOREIGN KEY (`tut_id`)
+    REFERENCES `med_pet`.`animais` (`tutores_tut_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+    CONSTRAINT `fk_timestamps_veterinarios1`
+    FOREIGN KEY (`vet_id`)
+    REFERENCES `med_pet`.`animais` (`veterinarios_vet_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
 

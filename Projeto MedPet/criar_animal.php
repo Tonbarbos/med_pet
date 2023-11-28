@@ -1,4 +1,5 @@
 <?php
+session_start();
 var_dump($_FILES)['arquivo']; 
 include_once "./conexao.php";
 $anim_nome = $_POST['anim_nome'];
@@ -47,7 +48,7 @@ if(isset($_POST['btn'])){
         
 
 
-$query_add = "INSERT INTO `animais` (`anim_nome`, `anim_especie`, `anim_genero`, `anim_tipSang`, `anim_datNasc`, `anim_peso`, `anim_alergias`, `anim_desc`, `tutores_tut_id`, `veterinarios_vet_id` ) VALUES ('$anim_nome', '$especie', '$genero', '$tipo_sang', '$anim_data', '$peso', '$alergias', '$descr', '$tutorSelecionado', '$veterinarioSelecionado')";
+$query_add = "INSERT INTO `animais` (`anim_nome`, `anim_especie`, `anim_genero`, `anim_tipSang`, `anim_datNasc`, `anim_peso`, `anim_alergias`, `anim_desc`, `tutores_tut_id`, `veterinarios_vet_id` ) VALUES ('$anim_nome', '$especie', '$genero', '$tipo_sang', '$anim_data', '$peso', '$alergias', '$descr', ".$_SESSION['id_tut'].", '$veterinarioSelecionado')";
 $preparar = $connect->prepare($query_add);
 try{
     $preparar->execute();

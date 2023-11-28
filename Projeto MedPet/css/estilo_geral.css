@@ -7,7 +7,7 @@ body{
     background-color: lightseagreen;
 }
 .perfil{
-    display: none;
+    visibility: hidden;
 }
 header{
     text-align: center;

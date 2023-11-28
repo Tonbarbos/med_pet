@@ -45,9 +45,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         calendar.render();
       });
-var botaoCalen = document.getElementById("calendario");
-var botaoAnim = document.getElementById("animais");
-botaoCalen.addEventListener("click", function (){
+
+document.getElementById("calendario").addEventListener("click", function (){
   document.getElementById("calendar").classList.toggle("none");
 
 });
@@ -64,8 +63,4 @@ window.onclick = function(event) {
   }
 }
 
-// <?phpif(isset($_POST['envia-form'])){
-//   $titulo = $_POST['titulo'];    
-//   $reg = array("options"=>array("regexp"=>"/[(a-zA-Z])(\s)]/")); 
-//   if($titulo!==null && !filter_var($titulo, FILTER_VALIDATE_REGEXP,$reg)){ echo "Entrada Inválida";}}?>
     

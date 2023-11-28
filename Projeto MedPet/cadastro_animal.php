@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,39 +34,13 @@
                     <input type="text" name="alergias" id="alergias">
                     <label for="descr">Motivos do Tratamento: </label>
                     <textarea name="descr" id="descr"></textarea>                 
-                    <div class="box">
-                        <label for ="selecaotutores">Selecione o tutor</label>
-                        <select name="selecaoTutores">
-                            <?php
-                                include_once "./conexao.php";
-                            
-                                try {
-                                    $connect = new PDO("mysql:host=$server;dbname=" . $dbname, $user, $passwd);
-                                    $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                                
-                                  
-                                    $consulta = $connect->query("SELECT tut_id, tut_nome FROM tutores");
-                                    while ($linha = $consulta->fetch(PDO::FETCH_ASSOC)) {
-                                        echo "<option value='" . $linha['tut_id'] . "'>" . $linha['tut_nome'] . "</option>";
-                                    }
-
-                                    $connect = null; // Fechar a conexão
-                                } catch (PDOException $e) {
-                                    die("Erro na conexão: " . $e->getMessage());
-                                }
-                            ?>
-                        </select>
-                    </div>
-                            
+                      
                     <div class="box">
                         <label for = "selecaoVeterinarios">Selecione o veterinário</label>
                         <select name="selecaoVeterinarios">
                             <?php
                                 include_once "./conexao.php";
                                 try {
-                                    
-
-                                    $connect = new PDO("mysql:host=$server;dbname=" . $dbname, $user, $passwd);
                                     $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                                 
                                     $consulta = $connect->query("SELECT vet_id, vet_nome FROM veterinarios");

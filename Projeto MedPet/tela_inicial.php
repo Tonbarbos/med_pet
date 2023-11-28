@@ -20,17 +20,19 @@
         <div class="navbar mainscr">
             <div>
                 <a href="tela_inicial.php"><img src="css/imagens/logona sem nome.jpeg" alt="logo.png"></a>
-            </div>    
-            <button id="calendario">Calendário</button>
-            <?php if ($_SESSION['vet']){?>
-                <button id="cadastrarAnimal">Cadastrar Animal</button>
-            <?php }?>
-            <button id="logout">Logout</button>  
+            </div>
+            <div><button id="calendario">Calendário</button></div>
+            <?php if($_SESSION['tut']){?><div><button id="cadastrarAnimal">Cadastrar Animal</button></div><?php }else{?><div><button id="alguma_coisa">botao alter</button></div><?php }?>
+            <div><button id="logout">Logout</button></div>
+                
+            
+            
+              
         </div>
     </header> 
 <div class="linha">
     <div class="coluna meio">
-            
+          
         <div id="evento" class="modal">
         <form action="criar_evento.php" method="POST" id="form">
             <fieldset>
@@ -47,11 +49,10 @@
             <button type="submit" id="botao" name="envia-form">Adicionar</button>
         </form>
         </div>
-          
+        
         <div id="calendar"></div>
         </div>
-        <div id="perfil"></div>
-        </div>
+        
 
     <div class="coluna canto">   
     <?php if($_SESSION['vet']){echo "Bem Vindo(a), ".$_SESSION['nome_vet'];}else if($_SESSION['tut']){echo "Bem Vindo(a), ".$_SESSION['nome_tut'];}?>

@@ -38,20 +38,7 @@
                         <label for = "selecaoVeterinarios">Selecione o veterinário</label>
                         <select name="selecaoVeterinarios">
                             <?php
-                                include_once "./conexao.php";
-                                try {
-                                    $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                                
-                                    $consulta = $connect->query("SELECT vet_id, vet_nome FROM veterinarios");
-                                    while ($linha = $consulta->fetch(PDO::FETCH_ASSOC)) {
-                                        echo "<option value='" . $linha['vet_id'] . "'>" . $linha['vet_nome'] . "</option>";
-                                    }
-                                
-                                    $connect = null; // Fechar a conexão
-                                } catch (PDOException $e) {
-                                    die("Erro na conexão: " . $e->getMessage());
-                                }
-                                
+                                include_once "listar_veterinarios.php";
                             ?>
                         </select>
                     </div>

@@ -52,7 +52,7 @@ include_once "./conexao.php";
                         <label for = "selecaoVeterinarios">Selecione o veterinário</label>
                         <select name="selecaoVeterinarios">
                             <?php
-                                include_once "listar_veterinarios.php";
+                                include_once "listar_vet_opcoes.php";
                                 
                             ?>
                         </select>
@@ -62,7 +62,7 @@ include_once "./conexao.php";
                         <label for = "selecaoTutores">Selecione o Tutor</label>
                         <select name="selecaoTutores">
                             <?php
-                                include_once "listar_tutores.php";
+                                include_once "listar_tut_opcoes.php";
                                 
                             ?>
                         </select>

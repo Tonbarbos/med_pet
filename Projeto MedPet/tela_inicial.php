@@ -1,4 +1,6 @@
-<?php session_start();?>
+<?php session_start();
+include_once "./conexao.php";
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -45,6 +47,37 @@
                 <input type="date" name="dat_fim" id="data">
                 <label for="desc">Detalhes: </label>
                 <textarea name="desc" id="desc"></textarea>
+                <?php if($_SESSION['tut']){?>
+                    <div class="box">
+                        <label for = "selecaoVeterinarios">Selecione o veterinário</label>
+                        <select name="selecaoVeterinarios">
+                            <?php
+                                include_once "listar_veterinarios.php";
+                                
+                            ?>
+                        </select>
+                    </div>
+                    <?php }else if($_SESSION['vet']){?>
+                        <div class="box">
+                        <label for = "selecaoTutores">Selecione o Tutor</label>
+                        <select name="selecaoTutores">
+                            <?php
+                                include_once "listar_tutores.php";
+                                
+                            ?>
+                        </select>
+                    </div>
+                        
+                        <?php }?>
+                <div class="box">
+                <label for = "selecaoAnimal">Selecione o Animal</label>
+                <select name="selecaoAnimal">
+                    <?php
+                        include_once "listar_anim_opcoes.php";
+                        
+                    ?>
+                </select>
+                </div>
             </fieldset>
             <button type="submit" id="botao" name="envia-form">Adicionar</button>
         </form>

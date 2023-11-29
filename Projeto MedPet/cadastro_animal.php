@@ -22,8 +22,15 @@
                     <input type="text" name="anim_nome" id="anim_nome">
                     <label for="especie">Espécie: </label>
                     <input type="text" name="especie" id="especie">
-                    <label for="genero">Gênero: </label>
-                    <input type="text" name="genero" id="genero">
+                    <label for="genero">Gênero:</label>
+                    <label for="macho">Macho</label>
+                    <input type="radio" name="genero" id="macho" value="Macho">
+                    
+
+                    <label for="femea">Fêmea</label>
+                    <input type="radio" name="genero" id="femea" value="Fêmea">
+                    
+
                     <label for="tipo">Tipo Sanguíneo: </label>
                     <input type="text" name="tipo_sang" id="tipo">
                     <label for="peso">Peso: </label>
@@ -42,7 +49,14 @@
                             ?>
                         </select>
                     </div>
-
+                    <div class="box">
+                        <label for = "selecaoTutores">Selecione o tutor</label>
+                        <select name="selecaoTutores">
+                            <?php
+                                include_once "listar_tutores.php";
+                            ?>
+                        </select>
+                    </div>
                     <label for="imagem">Selecione a imagem de perfil do animal:</label>
                     <input type="file" name="imagem" accept="image/*" class="form-control" required/>
                     <div class="login-button">        

@@ -42,9 +42,9 @@ include_once "./conexao.php";
                 <label for="titulo">Titulo: </label>
                 <input type="text" name="titulo" id="titulo">
                 <label for="data">Data de Inicio: </label>
-                <input type="date" name="dat_ini" id="data">
+                <input type="date" name="dat_ini" id="datetime-local">
                 <label for="data">Data de Fim: </label>
-                <input type="date" name="dat_fim" id="data">
+                <input type="date" name="dat_fim" id="datetime-local">
                 <label for="desc">Detalhes: </label>
                 <textarea name="desc" id="desc"></textarea>
                 <?php if($_SESSION['tut']){?>

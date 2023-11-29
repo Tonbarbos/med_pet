@@ -18,7 +18,7 @@ try{
 $array = $preparar->fetchall(PDO::FETCH_ASSOC);
 foreach($array as $chave => $valor) {
     extract($valor);
-    echo "<option value='" . $id. "'name='vet'>" . $nome . "</option>";
+    echo "<option value='" . $id. "'name='anim'>" . $nome . "</option>";
 }
 ?>
 ?>

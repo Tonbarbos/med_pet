@@ -45,7 +45,7 @@
                         <label for = "selecaoVeterinarios">Selecione o veterinário</label>
                         <select name="selecaoVeterinarios">
                             <?php
-                                include_once "listar_veterinarios.php";
+                                include_once "listar_vet_opcoes.php";
                             ?>
                         </select>
                     </div>
@@ -53,7 +53,7 @@
                         <label for = "selecaoTutores">Selecione o tutor</label>
                         <select name="selecaoTutores">
                             <?php
-                                include_once "listar_tutores.php";
+                                include_once "listar_tut_opcoes.php";
                             ?>
                         </select>
                     </div>

@@ -51,7 +51,7 @@ document.getElementById("calendario").addEventListener("click", function (){
 
 });
 document.getElementById("cadastrarAnimal").addEventListener("click", function(){
-  window.location.href("cadastro_animal.php");
+  window.location.href="cadastro_animal.php";
 });
 document.getElementById("logout").addEventListener("click", function(){
   window.location.replace("logoff.php");

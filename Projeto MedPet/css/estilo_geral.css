@@ -103,7 +103,9 @@ div > button{
     width: 8em;
     font-size: 0.7em;
 }
-
+div > button:hover{
+    cursor: pointer;
+}
 .fc-button-primary{
     width: 5em;
 }
@@ -162,12 +164,6 @@ div > button{
 }
 .block{
     display: block;
-}
-.ativo{
-    background-color: blue;
-}
-.naoAtivo{
-    background-color: transparent;
 }
 td{
     height: 114px;

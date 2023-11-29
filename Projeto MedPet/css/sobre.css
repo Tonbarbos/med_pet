@@ -17,32 +17,30 @@ div > img{
 .header{
     display: flex;
     flex-wrap: wrap;
-    background-color: rgba(210, 241, 225, 0.992);
     box-sizing: border-box;
+    background-color: #e7faf7;
 }
-
 
 
 .logo{
     position: relative;
     left: 0;
-    width: 8em;
-    height: 8em;
+    width: 6em;
+    height: 6em;
 }
 
 .header div[class="menu"]{
     position: absolute;
-    right: 0;
+    right: 6em;
     text-align: right;
     padding-top: 2.7em;
 
 }
 
 .menu a{
-    color: black;
     text-decoration: none;
     font-weight: bold;
-    margin-right: 15px;
+    margin-right: 3em;
 }
 
 .center{
@@ -63,23 +61,64 @@ section.sobre{
 .sobre p{
     margin: 20px 0;
     color: black;
-    font-size: 17px;
+    font-size: 25px;
     font-weight: bold;
     max-width: 800px;
     padding-bottom: 11px;
 }
 
 .sobre h1{
-    font-size: 3.5rem;
+    font-size: 4.5rem;
 }
 
-.sobre button{
-    border: 0;
-    background-color: #3aa38e;
-    color: white;
-    border-radius: 10px;
-    width: 100px;
+
+/* botao para ir pro Login, botao estilizado*/
+.botao{
+    position: fixed;
+    top: 53%;
+    left: 4%;
+    transform: translate(-50%, -50%);
+  }
+  
+  a{
+    display: inline-block;
+    width: 200px;
     height: 40px;
-    cursor: pointer;
-    
-}
+    line-height: 40px;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: black;
+    border: 2px solid black;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+    position: relative;
+    top: -1em;
+    left: 3em;
+  }
+  
+  a span{
+    position: relative;
+    z-index: 2;
+  }
+  
+  a:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #178871;
+    transition: all .35s;
+  }
+  
+  a:hover{
+    color: #fff;
+  }
+  
+  a:hover:after{
+    width: 100%;
+  }

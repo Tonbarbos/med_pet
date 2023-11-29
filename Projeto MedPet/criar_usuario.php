@@ -16,6 +16,7 @@ if ($tipo == 'veterinario'){
 $preparar = $connect->prepare($query_add);
 try{
     $preparar->execute();
+    include 'enviado.php';
 }catch(PDOException $e){
     echo "Erro ao tentar adicionar: " . $e;
 

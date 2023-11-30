@@ -39,12 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
           },
           eventClick: function(info) {
-            var tooltip = new Tooltip(info.el, {
-              title: info.event.extendedProps.description,
-              placement: 'top',
-              trigger: 'hover',
-              container: 'body'
-            });
+            document.getElementById("detalhes").style.display="block";
           },          
           events:'listar_eventos.php'
 
@@ -62,11 +57,12 @@ document.getElementById("cadastrarAnimal").addEventListener("click", function(){
 document.getElementById("logout").addEventListener("click", function(){
   window.location.replace("logoff.php");
 });
-var divForm = document.getElementById("evento");
+//clicar fora do form para fechar as janelas modais
 window.onclick = function(event) {
-  if (event.target == divForm) {
-    divForm.style.display = "none";
-  }
+  if (event.target == document.getElementById("evento")) {
+    document.getElementById("evento").style.display = "none";
+  }else if (event.target == document.getElementById("detalhes")) {
+    document.getElementById("detalhes").style.display = "none";
 }
-
+}
     

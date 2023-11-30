@@ -6,9 +6,6 @@ body{
 .bgcolor{
     background-color: lightseagreen;
 }
-.perfil{
-    visibility: hidden;
-}
 header{
     text-align: center;
     position: relative;
@@ -108,6 +105,9 @@ div > button:hover{
 }
 .fc-button-primary{
     width: 5em;
+}
+.fc-event-title-container:hover {
+    cursor: pointer;
 }
 .modal{
     display:none;

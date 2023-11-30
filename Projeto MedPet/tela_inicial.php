@@ -12,8 +12,6 @@ include_once "./conexao.php";
     <script src="js/fullcalendar-6.1.9/packages/daygrid/index.global.min.js" defer></script>
     <script src="js/fullcalendar-6.1.9/packages/timegrid/index.global.min.js" defer></script>
     <script src="js/fullcalendar-6.1.9/packages/list/index.global.min.js" defer></script>
-    <script src="https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js" defer></script>
-    <script src="https://unpkg.com/popper.js/dist/umd/popper.min.js" defer></script>
     <script src="js/calendario.js" defer></script>
     <script src="js/auth.js" defer></script>
 
@@ -26,6 +24,7 @@ include_once "./conexao.php";
                 <a href="tela_inicial.php"><img src="css/imagens/logona sem nome.jpeg" alt="logo.png"></a>
             </div>
             <button id="calendario">Calendário</button>
+            <button id="perfil">Perfil</button>
             <?php if($_SESSION['tut']){?><button id="cadastrarAnimal">Cadastrar Animal</button><?php }else{?><button id="alguma_coisa">botao alter</button><?php }?>
             <button id="logout">Logout</button>
                 
@@ -86,6 +85,8 @@ include_once "./conexao.php";
         </div>
         
         <div id="calendar"></div>
+        <div id="detalhes" class="modal">Pegue na minha</div>
+
         </div>
         
 

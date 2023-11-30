@@ -25,6 +25,7 @@ foreach($array as $chave => $valor){
     $evt_calendar[] = [
         //descricao do formato abaixo: diretriz do fullcalendar => nome da coluna no DB
         'title' => $evt_titulo,
+        'description' => $evt_desc,
         'start' => $evt_inicio,
         'end' => $evt_fim,
     ];

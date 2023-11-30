@@ -9,13 +9,14 @@
 .title {
     text-align: center;
     margin-top: 50px;
+    font-size: 150%;
 }
 
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-   background-image: url(imagens/fundoFODA.png);
+    background-image: url(imagens/fundo3.jpg);
 }
 
 .container{
@@ -27,13 +28,14 @@ body {
 }
 .form{
     margin: auto;
-    width: 50%;
+    width: 35%;
     display: flex;
     flex-direction: column;
     background-color: #e7faf7;
     position: relative;
     bottom: 5%;
-    
+    top: 2em; 
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, .212);
 }
 
 .input-group{
@@ -71,11 +73,11 @@ body {
     background-color: #1ED4AF;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 10%; 
+    margin-top: 4%; 
+    margin-bottom: 5%; 
     width: 15.5em;
     height: 3em;
-    left: 15%;
-
+    margin-left: 35%;
 }
 
 .login-button button:hover{
@@ -92,28 +94,18 @@ body {
 .input-radio {
     display: flex;
     flex-direction: column;
-    
-}
-.input-radio > div{
-    margin: 0.2em;
+    max-width: 400px;
+    margin-left: 20%;
+
 }
 
 
-@media only screen and (max-width: 600px) /*Consertar o botão que ta torto, fiz de tudo e não consegui resolver */ {
+/*Media Screens funcionando bem, sem perda de conteúdo na tela*/
+@media only screen and (max-width: 600px){
 
     body{
         background-image: url("imagens/telaCelularGrande.png");
         margin-top: 0%;
-    }
-    div > legend > img{
-        width: 22em;
-        height: 22em;
-    }
-    .title{
-        font-size: 120%;
-        margin-left: 0%;
-        font-family: 'Roboto';
-        box-sizing: border-box;
     }
     .input-box{
         margin-bottom: 0rem;
@@ -136,11 +128,59 @@ body {
     .a{
         margin-left: 5px;
     }
+    .input-radio {
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+        margin-left: 9%;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        position: relative;
+    
+    }
+    .login-button button{
+        display: inline-block;
+        border: none;
+        position: relative;
+        background-color: #1ED4AF;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 4%; 
+        margin-bottom: 5%; 
+        width: 11.5em;
+        height: 3em;
+        transform: translate(-15%, 30%);
+    }
     
 }
 
-@media only screen and(min-width: 600px){
-    .login-button button{
-        left: 15%;
+@media only screen and (min-width: 600px) and (max-width: 1200px) {
+    body{
+        background-image: url(imagens/fundoTablete.png);
+        margin-top: 0%;
+    }
+    .input-box{
+        margin-bottom: 0rem;
+        width: 100%;
+        height: 30%;
+        margin-left: 0px;
+    }
+    .input-box input{
+        width: 100%;
+    }
+
+    .container{
+        width: 90%;
+    }
+
+    .form{
+        width: 100%;
+        top: 5.2em;
+        width: 75%;
+    }
+    .a{
+        margin-left: 5px;
     }
 }
+
+

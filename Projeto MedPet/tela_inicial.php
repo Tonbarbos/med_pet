@@ -85,7 +85,8 @@ include_once "./conexao.php";
         </div>
         
         <div id="calendar"></div>
-        <div id="detalhes" class="modal">Pegue na minha</div>
+        <div id="detalhes" class="modal">
+            <div>Detalhes do evento</div></div>
 
         </div>
         

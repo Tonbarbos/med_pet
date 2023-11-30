@@ -12,6 +12,8 @@ include_once "./conexao.php";
     <script src="js/fullcalendar-6.1.9/packages/daygrid/index.global.min.js" defer></script>
     <script src="js/fullcalendar-6.1.9/packages/timegrid/index.global.min.js" defer></script>
     <script src="js/fullcalendar-6.1.9/packages/list/index.global.min.js" defer></script>
+    <script src="https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js" defer></script>
+    <script src="https://unpkg.com/popper.js/dist/umd/popper.min.js" defer></script>
     <script src="js/calendario.js" defer></script>
     <script src="js/auth.js" defer></script>
 
@@ -23,9 +25,9 @@ include_once "./conexao.php";
             <div>
                 <a href="tela_inicial.php"><img src="css/imagens/logona sem nome.jpeg" alt="logo.png"></a>
             </div>
-            <div><button id="calendario">Calendário</button></div>
-            <?php if($_SESSION['tut']){?><div><button id="cadastrarAnimal">Cadastrar Animal</button></div><?php }else{?><div><button id="alguma_coisa">botao alter</button></div><?php }?>
-            <div><button id="logout">Logout</button></div>
+            <button id="calendario">Calendário</button>
+            <?php if($_SESSION['tut']){?><button id="cadastrarAnimal">Cadastrar Animal</button><?php }else{?><button id="alguma_coisa">botao alter</button><?php }?>
+            <button id="logout">Logout</button>
                 
             
             
@@ -41,16 +43,16 @@ include_once "./conexao.php";
                 <legend>Cadastrar Evento</legend>
                 <label for="titulo">Titulo: </label>
                 <input type="text" name="titulo" id="titulo">
-                <label for="data">Data de Inicio: </label>
-                <input type="date" name="dat_ini" id="datetime-local">
-                <label for="data">Data de Fim: </label>
-                <input type="date" name="dat_fim" id="datetime-local">
+                <label for="data_ini">Data de Inicio: </label>
+                <input type="datetime-local" name="dat_ini" id="data_ini">
+                <label for="data_fim">Data de Fim: </label>
+                <input type="datetime-local" name="dat_fim" id="data_fim">
                 <label for="desc">Detalhes: </label>
                 <textarea name="desc" id="desc"></textarea>
                 <?php if($_SESSION['tut']){?>
                     <div class="box">
                         <label for = "selecaoVeterinarios">Selecione o veterinário</label>
-                        <select name="selecaoVeterinarios">
+                        <select name="selecaoVeterinarios" id="selecaoVeterinarios">
                             <?php
                                 include_once "listar_vet_opcoes.php";
                                 
@@ -60,7 +62,7 @@ include_once "./conexao.php";
                     <?php }else if($_SESSION['vet']){?>
                         <div class="box">
                         <label for = "selecaoTutores">Selecione o Tutor</label>
-                        <select name="selecaoTutores">
+                        <select name="selecaoTutores" id="selecaoTutores">
                             <?php
                                 include_once "listar_tut_opcoes.php";
                                 
@@ -71,7 +73,7 @@ include_once "./conexao.php";
                         <?php }?>
                 <div class="box">
                 <label for = "selecaoAnimal">Selecione o Animal</label>
-                <select name="selecaoAnimal">
+                <select name="selecaoAnimal" id="selecaoAnimal">
                     <?php
                         include_once "listar_anim_opcoes.php";
                         

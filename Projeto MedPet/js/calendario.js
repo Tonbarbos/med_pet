@@ -38,8 +38,14 @@ document.addEventListener('DOMContentLoaded', function() {
               }
             }
           },
-
-          
+          eventClick: function(info) {
+            var tooltip = new Tooltip(info.el, {
+              title: info.event.extendedProps.description,
+              placement: 'top',
+              trigger: 'hover',
+              container: 'body'
+            });
+          },          
           events:'listar_eventos.php'
 
         });

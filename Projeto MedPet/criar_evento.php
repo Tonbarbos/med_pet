@@ -17,15 +17,15 @@ if($_SESSION['vet']){
                 VALUES ('$titulo', '$desc', '$dat_ini', '$dat_fim', '$animalSelecionado', '". $_SESSION['id_tut']."', '$veterinarioSelecionado')";
 }
 
-
-
-//ainda tenho q trabalhar com a brincadeira de diferenciar o tipo de usuário logado aq nesse select
-$query_add="INSERT INTO `eventos` (`evt_titulo`, `evt_desc`, `evt_inicio`, `evt_fim`, `anim_id`, `tut_id`,`vet_id`) 
-VALUES ('$titulo', '$desc', '$dat_ini', '$dat_fim', '$animalSelecionado', '$tutorSelecionado', '1')";
 echo $query_add;
 $preparar = $connect->prepare($query_add);
 try{
     $preparar->execute();
+?>
+    <script>
+        window.location.replace("tela_inicial.php");
+    </script>
+<?php
 }catch(PDOException $e){
     echo "Erro ao tentar adicionar: " . $e;
 

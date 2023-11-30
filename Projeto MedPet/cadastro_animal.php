@@ -33,7 +33,7 @@
 
                     <label for="tipo">Tipo Sanguíneo: </label>
                     <input type="text" name="tipo_sang" id="tipo">
-                    <label for="peso">Peso: </label>
+                    <label for="peso">Peso em KG: </label>
                     <input type="text" name="peso" id="peso">
                     <label for="anim_data">Data de Nascimento: </label>
                     <input type="date" name="anim_data" id="anim_data">

@@ -1,0 +1,69 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-image: url(imagens/fundoFODA.png);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.box {
+    width: 25%; /* Utilizando uma porcentagem para tornar responsivo */
+    max-width: 600px; /* Definindo uma largura máxima */
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+}
+
+.slide-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.message {
+    line-height: 1.5;
+    font-size: 1.5rem;
+}
+
+.comment-action {
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-block;
+    white-space: nowrap !important;
+    background: transparent;
+    border: none;
+    padding: 15px 30px;
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.button:hover {
+    text-shadow: 0 0 0.65px var(--color), 0 0 0.65px var(--color);
+}
+
+.button.retornar {
+    color: green;
+    --color: green;
+}
+
+.button.inserir {
+    color: red;
+    --color: red;
+}
+
+/* Adicionando uma regra de mídia para telas menores */
+@media (max-width: 768px) {
+    .box {
+        width: 80%; /* Reduzindo a largura para telas menores */
+    }
+}

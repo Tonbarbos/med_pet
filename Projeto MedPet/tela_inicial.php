@@ -94,15 +94,19 @@ include_once "./conexao.php";
     <div class="coluna canto">   
     <?php if($_SESSION['vet']){echo "Bem Vindo(a), ".$_SESSION['nome_vet'];}else if($_SESSION['tut']){echo "Bem Vindo(a), ".$_SESSION['nome_tut'];}?>
 
-        <table border="1" width="100%">
-            <?php
-            include_once "listar_animais.php";
-            foreach($array as $chave => $valor){
-                extract($valor);
+    <table border="1" width="100%">
+        <?php
+        include_once "listar_animais.php";
+        foreach ($array as $item) {
             ?>
-        <tr><td>Animal:</td>
-        <td><?php echo $nome;}?></td></tr> 
-        </table>
+            <tr>
+                <td> <img height='125' src="<?php echo 'imagens/' . $item['arquivo']; ?>"></td>
+                <td><?php echo $item['nome']; ?></td>
+            </tr>
+            <?php
+        }
+        ?>
+    </table>
     
     
         <div>

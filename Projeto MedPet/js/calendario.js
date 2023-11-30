@@ -47,15 +47,8 @@ document.addEventListener('DOMContentLoaded', function() {
         calendar.render();
       });
 
-document.getElementById("calendario").addEventListener("click", function (){
-  document.getElementById("calendar").classList.toggle("none");
-
-});
-document.getElementById("cadastrarAnimal").addEventListener("click", function(){
-  window.location.href="cadastro_animal.php";
-});
-document.getElementById("logout").addEventListener("click", function(){
-  window.location.replace("logoff.php");
+document.getElementById("logoff").addEventListener("click", function(){
+  window.location.href="logoff.php";
 });
 //clicar fora do form para fechar as janelas modais
 window.onclick = function(event) {

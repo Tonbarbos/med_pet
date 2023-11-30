@@ -25,8 +25,14 @@ include_once "./conexao.php";
             </div>
             <button id="calendario">Calendário</button>
             <button id="perfil">Perfil</button>
-            <?php if($_SESSION['tut']){?><button id="cadastrarAnimal">Cadastrar Animal</button><?php }else{?><button id="alguma_coisa">botao alter</button><?php }?>
-            <button id="logout">Logout</button>
+            <?php if($_SESSION['tut']){?>
+                <button id="cadastrarAnimal">Cadastrar Animal</button>
+                <script>document.getElementById("cadastrarAnimal").addEventListener("click", function(){
+                window.location.href="cadastro_animal.php";});</script>
+            <?php }else{?>
+                <button id="alguma_coisa">botao alter</button>
+            <?php }?>
+            <button id="logoff">Logout</button>
                 
             
             

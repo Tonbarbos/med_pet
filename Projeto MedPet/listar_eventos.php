@@ -14,7 +14,11 @@ if($_SESSION['vet']){
 //variavel usada para preparar a consulta
 $preparar = $connect->prepare($query_eventos);
 //executar a consulta
-$preparar->execute();
+try{
+    $preparar->execute();
+}catch(PDOException $e){
+    echo"Erro: ".$e;
+}
 //extrair o resultado da query como uma array
 $array = $preparar->fetchall(PDO::FETCH_ASSOC);
 //uma outra array para guardar o que vai ser passado pro calendario no javascript
@@ -25,7 +29,6 @@ foreach($array as $chave => $valor){
     $evt_calendar[] = [
         //descricao do formato abaixo: diretriz do fullcalendar => nome da coluna no DB
         'title' => $evt_titulo,
-        'description' => $evt_desc,
         'start' => $evt_inicio,
         'end' => $evt_fim,
     ];

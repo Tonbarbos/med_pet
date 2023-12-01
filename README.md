@@ -20,3 +20,6 @@
 * Uma aba de comentário no menu entre tutor e veterinário. 
 
 * Uma aba de comentário na opção “adiar” para que o tutor justifique o porquê de estar adiando aquele remédio.
+
+Slides de aparesentação: https://www.canva.com/design/DAFStPOIDMk/pZsgp59ani5IWwyELHLQcA/edit
+Site: http://www.medpet.free.nf

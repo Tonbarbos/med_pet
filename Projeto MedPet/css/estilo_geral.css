@@ -3,6 +3,9 @@
 body{
     font-family: Roboto;
 }
+#perfil{
+    visibility: hidden;
+}
 .bgcolor{
     background-color: rgb(88, 196, 181);
 }

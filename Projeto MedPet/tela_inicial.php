@@ -13,7 +13,6 @@ include_once "./conexao.php";
     <script src="js/fullcalendar-6.1.9/packages/timegrid/index.global.min.js" defer></script>
     <script src="js/fullcalendar-6.1.9/packages/list/index.global.min.js" defer></script>
     <script src="js/calendario.js" defer></script>
-    <script src="js/auth.js" defer></script>
 
 </head>
 
@@ -79,6 +78,7 @@ include_once "./conexao.php";
         </div>
         
         <div id="calendar"></div>
+        
         <div id="detalhes" class="modal">
             <div>Detalhes do evento</div></div>
 
@@ -97,44 +97,13 @@ include_once "./conexao.php";
                 <td> <img height='125' src="<?php echo 'imagens/' . $item['arquivo']; ?>"></td>
                 <td id="perfil_anim"><?php echo $item['nome']; ?></td>
             </tr>
-            <?php
-        }
-        ?>
-    </table>
-    
-    
-        <div>
-            
-        </div>
-        
+            <?php }?>
+        </table>
     </div>
     
 </div>
-<div id="perfil" class="linha">
-   <div class="perfil"></div> 
-<div class="coluna canto">   
-    <?php if($_SESSION['vet']){echo "Bem Vindo(a), ".$_SESSION['nome_vet'];}else if($_SESSION['tut']){echo "Bem Vindo(a), ".$_SESSION['nome_tut'];}?>
 
-    <table border="1" width="100%">
-        <?php
-        include_once "listar_animais.php";
-        foreach ($array as $item) {
-            ?>
-            <tr>
-                <td> <img height='125' src="<?php echo 'imagens/' . $item['arquivo']; ?>"></td>
-                <td id="perfil_anim"><?php echo $item['nome']; ?></td>
-            </tr>
-            <?php
-        }
-        ?>
-    </table>
-    
-    
-        <div>
-            
-        </div>
-        
-    </div>
+
 </div>
 </body>
 </html>

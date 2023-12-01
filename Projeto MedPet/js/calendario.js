@@ -44,19 +44,23 @@ document.addEventListener('DOMContentLoaded', function() {
 document.getElementById("logoff").addEventListener("click", function(){
   window.location.href="logoff.php";
 });
-if(!document.getElementById("evento_btn") == null){
+console.log(document.getElementById("evento_btn"));
+console.log(document.getElementById("cadastrarAnimal"));
+
+if(document.getElementById("evento_btn") != null){
   document.getElementById("evento_btn").addEventListener("click", function(){
   document.getElementById("evento").style.display="block";});
 }
-if(!document.getElementById("cadastrarAnimal") == null){
+if(document.getElementById("cadastrarAnimal") != null){
   document.getElementById("cadastrarAnimal").addEventListener("click", function(){
     window.location.href="cadastro_animal.php";});
+    console.log("Deveria estar funcionando. dentro do if.");
 }
 document.getElementById("calendario_btn").addEventListener("click", function(){
   document.getElementById("calendar").style.display="block";
 });
 document.getElementById("perfil_btn").addEventListener("click", function(){
-  document.getElementById("perfil").style.display="block";
+  window.location.href="perfil.php";
 });
 //clicar fora do form para fechar as janelas modais
 window.onclick = function(event) {

@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro do Animal</title>
     <link rel="stylesheet" href="css/registro.css">
-    <script src="js/auth.js" defer></script>
 </head>
 <body>
         <div class="form">

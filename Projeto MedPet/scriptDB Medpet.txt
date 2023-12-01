@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS `med_pet`.`tutores` (
   `tut_nome` VARCHAR(16) NOT NULL,
   `tut_fone` VARCHAR(45) NOT NULL,
   `tut_email` VARCHAR(255) NOT NULL,
-  `tut_senha` VARCHAR(32) NOT NULL,
+  `tut_senha` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`tut_id`));
 
 -- -----------------------------------------------------
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `med_pet`.`veterinarios` (
   `vet_nome` VARCHAR(16) NOT NULL,
   `vet_fone` VARCHAR(45) NOT NULL,
   `vet_email` VARCHAR(255) NOT NULL,
-  `vet_senha` VARCHAR(32) NOT NULL,
+  `vet_senha` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`vet_id`));
 
 -- -----------------------------------------------------

@@ -121,7 +121,7 @@ INSERT INTO `veterinarios` (`vet_nome`, `vet_fone`, `vet_email`, `vet_senha`) VA
 INSERT INTO `animais` (`anim_nome`, `anim_especie`, `anim_genero`, `anim_tipSang`, `anim_datNasc`, `anim_peso`, `anim_alergias`, `anim_desc`, `tutores_tut_id`, `veterinarios_vet_id`) VALUES ('Pitoco','Cão','Macho','O+', '2010-05-13', '25', 'Amendoim', 'Detalhes extra', '1', '1' );
 INSERT INTO `animais` (`anim_nome`, `anim_especie`, `anim_genero`, `anim_tipSang`, `anim_datNasc`, `anim_peso`, `anim_alergias`, `anim_desc`, `tutores_tut_id`, `veterinarios_vet_id`) VALUES ('Maxwell','Ave','Macho','A+', '2016-01-30', '2', 'Nenhuma', 'Detalhes extra', '2', '1' );
 INSERT INTO `eventos` (`evt_titulo`, `evt_desc`, `evt_inicio`, `evt_fim`, `anim_id`,`tut_id`,`vet_id`) VALUES ('Evento_exemplo','Remédio, consulta, exames, vacinação e etc.', '2023-11-08 13:30:00', '2023-11-08 15:30:00', '1','1','1');
-
+INSERT INTO `arquivo` (`id`, `arquivo`, `data`, `animais_anim_id`) VALUES (1, 'img teste.png', '2023-11-08', 1);
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;

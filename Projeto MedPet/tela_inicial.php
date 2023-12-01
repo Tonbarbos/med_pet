@@ -27,17 +27,13 @@ include_once "./conexao.php";
             <button id="perfil_btn">Perfil</button>
             <?php if($_SESSION['tut']){?>
                 <button id="cadastrarAnimal">Cadastrar Animal</button>
-                
             <?php }else{?>
                 <button id="evento_btn">Cadastrar Evento</button>
             <?php }?>
-            <button id="logoff">Logout</button>
-                
-            
-            
-              
+            <button id="logoff">Logout</button>          
         </div>
     </header> 
+
 <div id="calendario" class="linha">
     <div class="coluna meio">
           
@@ -59,31 +55,24 @@ include_once "./conexao.php";
                         <select name="selecaoVeterinarios" id="selecaoVeterinarios">
                             <?php
                                 include_once "listar_vet_opcoes.php";
-                                
                             ?>
                         </select>
                     </div>
-                    <?php }else if($_SESSION['vet']){?>
-                        <div class="box">
+                <?php }else if($_SESSION['vet']){?>
+                    <div class="box">
                         <label for = "selecaoTutores">Selecione o Tutor</label>
                         <select name="selecaoTutores" id="selecaoTutores">
-                            <?php
-                                include_once "listar_tut_opcoes.php";
-                                
-                            ?>
+                            <?php include_once "listar_tut_opcoes.php";?>
                         </select>
                     </div>
-                        
-                        <?php }?>
+                    
+                    <?php }?>
                 <div class="box">
-                <label for = "selecaoAnimal">Selecione o Animal</label>
-                <select name="selecaoAnimal" id="selecaoAnimal">
-                    <?php
-                        include_once "listar_anim_opcoes.php";
-                        
-                    ?>
-                </select>
-                </div>
+                    <label for = "selecaoAnimal">Selecione o Animal</label>
+                    <select name="selecaoAnimal" id="selecaoAnimal">
+                        <?php include_once "listar_anim_opcoes.php";?>
+                    </select>
+                    </div>
             </fieldset>
             <button type="submit" id="botao" name="envia-form">Adicionar</button>
         </form>

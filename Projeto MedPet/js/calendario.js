@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
           },
           headerToolbar:{
-            center: 'eventButton1 eventButton2' 
+            center: 'eventButton1' 
           },
           buttonText:{
             today: 'Hoje'
@@ -30,12 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
                   calendar.changeView('dayGridMonth');
                 }
               }
-            },
-            eventButton2:{
-              text: 'Agendar Evento',
-              click: function(){
-                document.getElementById("evento").style.display="block";  
-              }
             }
           },
           eventClick: function(info) {
@@ -50,6 +44,14 @@ document.addEventListener('DOMContentLoaded', function() {
 document.getElementById("logoff").addEventListener("click", function(){
   window.location.href="logoff.php";
 });
+document.getElementById("evento_btn").addEventListener("click", function(){
+  document.getElementById("evento").style.display="block";  
+});
+if(!document.getElementById("cadastrarAnimal") == null){
+  document.getElementById("cadastrarAnimal").addEventListener("click", function(){
+    window.location.href="cadastro_animal.php";});
+}
+
 //clicar fora do form para fechar as janelas modais
 window.onclick = function(event) {
   if (event.target == document.getElementById("evento")) {

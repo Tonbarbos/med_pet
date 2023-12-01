@@ -5,6 +5,7 @@ body{
 }
 .bgcolor{
     background-color: lightseagreen;
+    height: auto;
 }
 header{
     text-align: center;
@@ -19,7 +20,7 @@ header{
 }
 .linha{
     margin: auto ;
-    width: 73%;
+    width: 80%;
     position: relative;
     display: flex;
     flex-direction: row;

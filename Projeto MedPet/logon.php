@@ -16,19 +16,22 @@ try{
     echo "Erro ao tentar buscar: " . $e;
 
 }
+
 $counter=0;
 echo $counter."<br>";
 $_SESSION['tut']= false;
 $_SESSION['vet']= false;
+
 //verifica a existencia dos dados em "tutores"
 foreach($array1 as $chave => $valor){
     extract($valor);
-    if($email_teste == $tut_email && $senha_teste == $tut_senha){
+    if ($email_teste == $tut_email && password_verify($senha_teste, $tut_senha)) {
         $_SESSION['id_tut'] = $tut_id;
-        $_SESSION['senha_tut']=$tut_senha;
+        $_SESSION['senha_tut'] = $tut_senha;
         $_SESSION['nome_tut'] = $tut_nome;
-        $_SESSION['tut']= true;
-        echo "tut";     
+        $_SESSION['tut'] = true;
+        echo "tut";
+        
 ?>
     <script>
         window.location.href="tela_inicial.php";
@@ -44,12 +47,13 @@ echo $counter."<br>";
 //verifica a existencia dos dados em "veterinarios"
 foreach($array2 as $chave => $valor){
     extract($valor);
-    if($email_teste == $vet_email && $senha_teste == $vet_senha){
+    if ($email_teste == $vet_email && password_verify($senha_teste, $vet_senha)) {
         $_SESSION['id_vet'] = $vet_id;
-        $_SESSION['senha_vet']=$vet_senha;
+        $_SESSION['senha_vet'] = $vet_senha;
         $_SESSION['nome_vet'] = $vet_nome;
-        $_SESSION['vet']= true;
-        echo "vet ";        
+        $_SESSION['vet'] = true;
+        echo "vet ";
+         
 ?>
     <script>
         window.location.href="tela_inicial.php";

@@ -1,5 +1,8 @@
 /* dps tem q mudar as fontes e blablabla */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+#perfil{
+    visibility: hidden;
+}
 body{
     font-family: Roboto;
 }

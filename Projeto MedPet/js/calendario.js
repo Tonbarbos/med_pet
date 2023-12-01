@@ -52,7 +52,12 @@ if(!document.getElementById("cadastrarAnimal") == null){
   document.getElementById("cadastrarAnimal").addEventListener("click", function(){
     window.location.href="cadastro_animal.php";});
 }
-
+document.getElementById("calendario_btn").addEventListener("click", function(){
+  document.getElementById("calendar").style.display="block";
+});
+document.getElementById("perfil_btn").addEventListener("click", function(){
+  document.getElementById("perfil").style.display="block";
+});
 //clicar fora do form para fechar as janelas modais
 window.onclick = function(event) {
   if (event.target == document.getElementById("evento")) {

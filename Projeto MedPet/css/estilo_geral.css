@@ -1,14 +1,10 @@
-/* dps tem q mudar as fontes e blablabla */
+/*atualizado */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
-#perfil{
-    visibility: hidden;
-}
 body{
     font-family: Roboto;
 }
 .bgcolor{
-    background-color: lightseagreen;
-    height: auto;
+    background-color: rgb(88, 196, 181);
 }
 header{
     text-align: center;
@@ -23,7 +19,7 @@ header{
 }
 .linha{
     margin: auto ;
-    width: 80%;
+    width: 73%;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -49,8 +45,9 @@ header{
 .navbar.mainscr{
     display: flex;
     flex-direction:row;
-    background-color: lightgrey;
+    background-color: #e7faf7;
     height: 5em;
+    width: 119.5em;
     
 }
 .navbar.mainscr div{
@@ -87,12 +84,12 @@ header{
   
 .coluna.canto {
     width: 20%;
+    border: none;
     
 }
 .navbar.mainscr img{
     height: 10em;
-
-    
+   
 }  
 .coluna.meio {
     width: 70%;
@@ -102,11 +99,17 @@ header{
 div > button{
     background-color:transparent;
     width: 8em;
-    font-size: 0.7em;
+    font-size: 1em;
+    border: none;
+    font-family: 'Roboto';
+
 }
+
 div > button:hover{
-    cursor: pointer;
+    cursor: pointer; 
+    font-size: 150%;
 }
+
 .fc-button-primary{
     width: 5em;
 }

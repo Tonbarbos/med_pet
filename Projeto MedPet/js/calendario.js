@@ -44,9 +44,10 @@ document.addEventListener('DOMContentLoaded', function() {
 document.getElementById("logoff").addEventListener("click", function(){
   window.location.href="logoff.php";
 });
-document.getElementById("evento_btn").addEventListener("click", function(){
-  document.getElementById("evento").style.display="block";  
-});
+if(!document.getElementById("evento_btn") == null){
+  document.getElementById("evento_btn").addEventListener("click", function(){
+  document.getElementById("evento").style.display="block";});
+}
 if(!document.getElementById("cadastrarAnimal") == null){
   document.getElementById("cadastrarAnimal").addEventListener("click", function(){
     window.location.href="cadastro_animal.php";});

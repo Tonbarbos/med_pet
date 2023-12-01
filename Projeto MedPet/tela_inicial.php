@@ -106,7 +106,7 @@ include_once "./conexao.php";
             ?>
             <tr>
                 <td> <img height='125' src="<?php echo 'imagens/' . $item['arquivo']; ?>"></td>
-                <td><?php echo $item['nome']; ?></td>
+                <td id="perfil_anim"><?php echo $item['nome']; ?></td>
             </tr>
             <?php
         }
